@@ -20,11 +20,9 @@ namespace ZRQ.WPF.Test
     /// </summary>
     public partial class MainWindow : Window
     {
-        WindowViewModel ViewModel { get; set; } = new WindowViewModel();
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = ViewModel;
         }
     }
 }

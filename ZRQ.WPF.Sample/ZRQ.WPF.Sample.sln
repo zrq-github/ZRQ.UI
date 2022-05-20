@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPF.Sample", "ZRQ.WPF.Sample.csproj", "{95C4DDFF-263E-444B-AC61-EDCD4ED29FC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPF.DataGridSample", "..\ZRQ.WPF.DataGridSample\ZRQ.WPF.DataGridSample.csproj", "{A8FFFF23-D494-4A7F-BCB4-54DC579F43C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95C4DDFF-263E-444B-AC61-EDCD4ED29FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C4DDFF-263E-444B-AC61-EDCD4ED29FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C4DDFF-263E-444B-AC61-EDCD4ED29FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C4DDFF-263E-444B-AC61-EDCD4ED29FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8FFFF23-D494-4A7F-BCB4-54DC579F43C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FFFF23-D494-4A7F-BCB4-54DC579F43C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FFFF23-D494-4A7F-BCB4-54DC579F43C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FFFF23-D494-4A7F-BCB4-54DC579F43C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E1067EB-86E5-4BA3-8206-4A0B522C458B}
+	EndGlobalSection
+EndGlobal

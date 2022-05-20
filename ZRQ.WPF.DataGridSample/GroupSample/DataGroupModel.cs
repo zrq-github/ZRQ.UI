@@ -31,7 +31,7 @@ public class DataGroupModel : ViewModelBase
     /// <summary>
     /// 设置文字颜色
     /// </summary>
-    public Brush Foreground
+    internal Brush Foreground
     {
         get
         {

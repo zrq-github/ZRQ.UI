@@ -27,7 +27,7 @@
                   Unchecked="RemoveGrouping">Group by task type</CheckBox>
 
         <DataGrid Grid.Row="1"
-                  x:Name="dg_CheckResult"
+                  x:Name="dg_GroupSample"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   CanUserSortColumns="False"
@@ -81,7 +81,7 @@
             </DataGrid.GroupStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="构件"
+                <DataGridTextColumn Header="名字"
                                     x:Name="dgCol_Name"
                                     Width="*"
                                     Binding="{Binding Name}">
@@ -97,7 +97,7 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="净高值"
+                <DataGridTextColumn Header="结果值"
                                     x:Name="dgCol_ResultValue"
                                     Width="*"
                                     Binding="{Binding ResultValue}">

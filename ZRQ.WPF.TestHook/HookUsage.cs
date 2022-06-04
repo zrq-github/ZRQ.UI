@@ -18,10 +18,9 @@ namespace ZRQ.WPF.TestHook
         public void Subscribe()
         {
             // Note: for the application hook, use the Hook.AppEvents() instead
-            m_GlobalHook = Hook.AppEvents();
+            m_GlobalHook = Hook.GlobalEvents();
 
             m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
-            m_GlobalHook.MouseDown += M_GlobalHook_MouseDown;
             m_GlobalHook.KeyPress += GlobalHookKeyPress;
         }
 
@@ -38,6 +37,10 @@ namespace ZRQ.WPF.TestHook
         private void GlobalHookMouseDownExt(object sender, MouseEventExtArgs e)
         {
             Console.WriteLine("MouseDown: \t{0}; \t System Timestamp: \t{1}", e.Button, e.Timestamp);
+            if (e.Button != MouseButtons.Right)
+            {
+                return;
+            }
 
             // uncommenting the following line will suppress the middle mouse button click
             // if (e.Buttons == MouseButtons.Middle) { e.Handled = true; }

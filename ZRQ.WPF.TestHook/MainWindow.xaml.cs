@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gma.System.MouseKeyHook;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,18 +21,21 @@ namespace ZRQ.WPF.TestHook
     /// </summary>
     public partial class MainWindow : Window
     {
-        MouseKeyHookUsage mouseKeyHook = new MouseKeyHookUsage();
+        private IKeyboardMouseEvents m_Events;
+
         public MainWindow()
         {
             InitializeComponent();
             this.Closed += MainWindow_Closed;
-
-            mouseKeyHook.Subscribe();
         }
 
         private void MainWindow_Closed(object sender, EventArgs e)
         {
-            mouseKeyHook.Unsubscribe();
         }
+
+        private void OnMouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
     }
 }

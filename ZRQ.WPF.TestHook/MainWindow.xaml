@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:ZRQ.WPF.TestHook"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Window.Resources>
+        <ContextMenu x:Key="ContextMenu">
+            <MenuItem Name="MiFullScreen"
+                      Header="全屏" />
+            <Separator></Separator>
+            <MenuItem Name="MiPlay"
+                      Header="播放" />
+        </ContextMenu>
+    </Window.Resources>
+    <Grid ContextMenu="{StaticResource ContextMenu}">
+        <Button Content="aa"></Button>
     </Grid>
 </Window>

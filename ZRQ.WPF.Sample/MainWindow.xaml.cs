@@ -24,5 +24,15 @@ namespace ZRQ.WPF.Sample
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Dothing dothing = new Dothing();
+            dothing.AA();
+
+
+            var a =  Dothing.AAAA;
+            Dothing.StaticVoid();
+        }
     }
 }

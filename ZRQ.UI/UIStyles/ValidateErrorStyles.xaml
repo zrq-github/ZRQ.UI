@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ControlTemplate x:Key="errorTemplate">
+    <ControlTemplate x:Key="ErrorTemplate">
         <Border BorderBrush="OrangeRed"
                 BorderThickness="2">
             <Grid>
@@ -14,7 +14,7 @@
         </Border>
     </ControlTemplate>
 
-    <Style x:Key="tbToolTip"
+    <Style x:Key="tbErrorToolTip"
         TargetType="{x:Type TextBox}">
         <Style.Triggers>
             <Trigger Property="Validation.HasError"

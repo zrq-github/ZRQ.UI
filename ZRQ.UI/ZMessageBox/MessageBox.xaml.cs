@@ -23,8 +23,5 @@ namespace RQ.UI.ZWPF.ZMessageBox
         {
             InitializeComponent();
         }
-
-        MessageBoxButton button;
-
     }
 }

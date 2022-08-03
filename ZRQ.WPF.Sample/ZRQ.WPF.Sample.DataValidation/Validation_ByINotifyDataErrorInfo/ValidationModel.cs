@@ -10,33 +10,29 @@ using ZRQ.UI.UIModel;
 
 namespace Validation_ByINotifyDataErrorInfo
 {
-    public class ValidationModel : ValidateAsyncModelBase
+    public class ValidationModel : ValidatableModel
     {
         private string _username = nameof(Username);
+        private string _email = nameof(Email);
+        private string _repeatEmail = nameof(RepeatEmail);
 
-        private string password = nameof(Password);
-
-        private string reportPassword = nameof(ReportPassword);
-
-        [Required(ErrorMessage = "Must not be empty.")]
-        public string Password
+        [Required]
+        [EmailAddress]
+        [StringLength(60)]
+        public string Email
         {
-            get => password; set
-            {
-                OnPropertyChanged(ref _username, value);
-            }
+            get { return _email; }
+            set { _email = value; RaisePropertyChanged("Email"); }
         }
 
-        [Required(ErrorMessage = "Must not be empty.")]
+        [Required]
+        [EmailAddress]
         [StringLength(60)]
-        [CustomValidation(typeof(ValidationModel), nameof(SameEmailValidate))]
-        public string ReportPassword
+        [CustomValidation(typeof(ValidationModel), "SameEmailValidate")]
+        public string RepeatEmail
         {
-            get => reportPassword;
-            set
-            {
-                OnPropertyChanged(ref _username, value);
-            }
+            get { return _repeatEmail; }
+            set { _repeatEmail = value; RaisePropertyChanged("RepeatEmail"); }
         }
 
         [Required(ErrorMessage = "Must not be empty.")]
@@ -46,17 +42,18 @@ namespace Validation_ByINotifyDataErrorInfo
             get { return _username; }
             set
             {
-                OnPropertyChanged(ref _username, value);
+                _username = value;
+                RaisePropertyChanged(nameof(Username));
+                //OnPropertyChanged(ref _username, value);
             }
         }
 
-        public static ValidationResult? SameEmailValidate(object obj, ValidationContext context)
+        public static ValidationResult SameEmailValidate(object obj, ValidationContext context)
         {
             var user = (ValidationModel)context.ObjectInstance;
-            if (user.Password != user.ReportPassword)
+            if (user.Email != user.RepeatEmail)
             {
-                return new ValidationResult("The emails are not equal",
-                    new List<string> { "Email", "RepeatEmail" });
+                return new ValidationResult("The emails are not equal", new List<string> { "Email", "RepeatEmail" });
             }
             return ValidationResult.Success;
         }

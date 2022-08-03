@@ -11,7 +11,6 @@ namespace Validation_ByCustom
     public class MinimumCharacterRule : ValidationRule
     {
         public int MinimumCharacters { get; set; }
-
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
             string charString = value as string;

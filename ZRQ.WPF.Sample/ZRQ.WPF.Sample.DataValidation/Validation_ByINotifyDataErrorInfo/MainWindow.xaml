@@ -14,9 +14,9 @@
             <Label>Username</Label>
             <TextBox Text="{Binding Username, ValidatesOnNotifyDataErrors=True,
                 UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Text="{Binding Email,UpdateSourceTrigger=PropertyChanged,ValidatesOnNotifyDataErrors=True}"></TextBox>
+            <TextBox Text="{Binding RepeatEmail,UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"></TextBox>
             <Button>Submit</Button>
-            <TextBox Text="{Binding Password,ValidatesOnNotifyDataErrors=True,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            <TextBox Text="{Binding ReportPassword,ValidatesOnNotifyDataErrors=True,UpdateSourceTrigger=PropertyChanged}"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

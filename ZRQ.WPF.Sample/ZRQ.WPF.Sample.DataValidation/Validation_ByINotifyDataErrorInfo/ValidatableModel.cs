@@ -1,35 +1,29 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Concurrent;
+using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.UIModel
+namespace Validation_ByINotifyDataErrorInfo
 {
-    /// <summary>
-    /// 异步验证部分逻辑
-    /// </summary>
-    public class ValidateAsyncModelBase : UIModelBase, INotifyDataErrorInfo
+    public class ValidatableModel : INotifyDataErrorInfo, INotifyPropertyChanged
     {
-        public override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private ConcurrentDictionary<string, List<string>> _errors =
+            new ConcurrentDictionary<string, List<string>>();
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void RaisePropertyChanged(string propertyName)
         {
-            base.OnPropertyChanged(propertyName);
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
             ValidateAsync();
         }
-
-        public override void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "")
-        {
-            base.OnPropertyChanged(ref property, value, propertyName);
-            ValidateAsync();
-        }
-
-        #region INotifyDataErrorInfo
-        private ConcurrentDictionary<string, List<string>> _errors = new ConcurrentDictionary<string, List<string>>();
 
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
@@ -95,6 +89,6 @@ namespace ZRQ.UI.UIModel
                 }
             }
         }
-        #endregion
     }
+
 }

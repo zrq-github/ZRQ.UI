@@ -24,6 +24,8 @@ namespace Validation_ByAnnotations
             }
         }
 
+        public int AA { get; set; }
+
         private void ValidateProperty<T>(T value, string name)
         {
             Validator.ValidateProperty(value, new ValidationContext(this, null, null)

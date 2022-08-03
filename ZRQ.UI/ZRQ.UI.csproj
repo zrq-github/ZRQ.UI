@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="WinForm\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
 

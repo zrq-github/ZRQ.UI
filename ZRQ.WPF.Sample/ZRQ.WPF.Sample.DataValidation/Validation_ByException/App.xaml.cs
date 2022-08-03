@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ZRQ.WPF.Sample
+namespace Validation_ByException
 {
     /// <summary>
     /// Interaction logic for App.xaml

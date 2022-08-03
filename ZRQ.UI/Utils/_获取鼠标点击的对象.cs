@@ -10,7 +10,7 @@ using System.Windows.Media;
 
 namespace ZRQ.UI.Utils.Test
 {
-    internal class 获取鼠标点击的对象
+    internal class _获取鼠标点击的对象
     {
         private void MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

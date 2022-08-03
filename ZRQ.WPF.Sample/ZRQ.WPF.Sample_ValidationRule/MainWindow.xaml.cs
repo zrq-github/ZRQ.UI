@@ -13,26 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZRQ.WPF.Sample
+namespace ZRQ.WPF.Sample_ValidationRule
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel ViewModel { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            this.ViewModel = new ViewModel();
+            this.DataContext = this.ViewModel;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Dothing dothing = new Dothing();
-            dothing.AA();
 
-
-            var a =  Dothing.AAAA;
-            Dothing.StaticVoid();
         }
     }
 }

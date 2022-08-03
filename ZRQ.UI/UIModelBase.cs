@@ -9,9 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.WPF;
+namespace ZRQ.UI;
 
-public class ViewModelBase : INotifyPropertyChanged
+public class UIModelBase : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -49,7 +49,7 @@ public class ViewModelBase : INotifyPropertyChanged
     protected bool SetValue<T>(ref T field, T value, [CallerMemberName] string propertyName = "")
     {
         // ReSharper disable once RedundantNameQualifier
-        if (object.Equals(field, value))
+        if (Equals(field, value))
         {
             return false;
         }

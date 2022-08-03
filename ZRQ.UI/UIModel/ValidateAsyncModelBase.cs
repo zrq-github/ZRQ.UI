@@ -9,20 +9,23 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI
+namespace ZRQ.UI.UIModel
 {
-    public class ValidatableModelBase : UIModelBase, INotifyDataErrorInfo
+    /// <summary>
+    /// 异步验证部分逻辑
+    /// </summary>
+    public class ValidateAsyncModelBase : UIModelBase, INotifyDataErrorInfo
     {
         public override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            base.OnPropertyChanged(propertyName);
             ValidateAsync();
+            base.OnPropertyChanged(propertyName);
         }
 
         public override void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "")
         {
-            base.OnPropertyChanged(ref property, value, propertyName);
             ValidateAsync();
+            base.OnPropertyChanged(ref property, value, propertyName);
         }
 
         #region INotifyDataErrorInfo

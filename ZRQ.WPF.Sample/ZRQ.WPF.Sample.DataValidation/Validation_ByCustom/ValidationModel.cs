@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZRQ.UI.UIModel;
 
-namespace Validation_ByException
+namespace Validation_ByCustom
 {
     public class ValidationModel : UIModelBase
     {

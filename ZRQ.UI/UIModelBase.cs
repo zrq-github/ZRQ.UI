@@ -25,7 +25,7 @@ public class UIModelBase : INotifyPropertyChanged
         OnPropertyChanged(propertyName);
     }
 
-    public void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "")
+    public virtual void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "")
     {
         property = value;
         var handler = PropertyChanged;

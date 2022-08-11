@@ -8,13 +8,13 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ZRQ.UI.UIUtils;
 
-namespace ZRQ.WPF.Sample.DataValidation
+namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,20 +28,17 @@ namespace ZRQ.WPF.Sample.DataValidation
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Page1 page = new Page1();
 
-            Window window = new Window();
-            window.Height = 500;
-            window.Width = 500;
-            window.Name = "Page验证测试";
-            window.Content = page;
-
-            window.Show();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void btn_FindChildByBinding(object sender, RoutedEventArgs e)
         {
+            TextBox dependencyObject = UIFinder.FindChild<TextBox>(this.mainWindow, TextBox.TextProperty, nameof(ViewModel.TestFindBingding));
 
+            TextBox foundTextBox =
+               UIFinder.FindChild<TextBox>(Application.Current.MainWindow, childName: "myTextBoxName");
+
+            List<TextBox> textBoxes = UIFinder.FindChildsHasError<TextBox>(this.mainWindow);
         }
     }
 }

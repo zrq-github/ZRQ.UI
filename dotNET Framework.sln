@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.csproj", "{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPF.Sample_ValidationRule", "ZRQ.WPF.Sample_ValidationRule\ZRQ.WPF.Sample_ValidationRule.csproj", "{718F31CC-25DA-4BD7-93D9-0739F28BF0F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4B9C7263-D88A-4240-A073-B18575DA1412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{A90B5FC8-F962-4D8C-90EA-BF27C0B52C06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,10 @@ Global
 		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{718F31CC-25DA-4BD7-93D9-0739F28BF0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{718F31CC-25DA-4BD7-93D9-0739F28BF0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{718F31CC-25DA-4BD7-93D9-0739F28BF0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{718F31CC-25DA-4BD7-93D9-0739F28BF0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90B5FC8-F962-4D8C-90EA-BF27C0B52C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90B5FC8-F962-4D8C-90EA-BF27C0B52C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90B5FC8-F962-4D8C-90EA-BF27C0B52C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90B5FC8-F962-4D8C-90EA-BF27C0B52C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

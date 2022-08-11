@@ -13,7 +13,7 @@ namespace ZRQ.UI.Utils
     /// <remarks>
     /// 存放一些正则表达式的用处
     /// </remarks>
-    public static class RegexUtils
+    public static class RegexMatch
     {
         public static bool IsTelePhone(string telePhone)
         {

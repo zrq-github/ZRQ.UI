@@ -1,0 +1,61 @@
+﻿ <!--zrq，整合一些通用格式-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converter="clr-namespace:HW.NetHeight.UIConverter">
+
+    <!--RadioButton-->
+    <Style TargetType="{x:Type RadioButton}"
+           x:Key="RadioButtonStyle">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+    </Style>
+
+    <!--TextBlock-->
+    <Style TargetType="{x:Type TextBlock}"
+           x:Key="TextBlockStyle">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    </Style>
+
+    <!--TextBox-->
+    <Style TargetType="{x:Type TextBox}"
+           x:Key="TextBoxStyle">
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment"
+                Value="Center"></Setter>
+    </Style>
+
+    <!--Button-->
+    <Style TargetType="{x:Type Button}"
+           x:Key="ButtonStyle">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+    </Style>
+
+    <!--Label-->
+    <Style TargetType="{x:Type Label}"
+           x:Key="LabelStyle">
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+    </Style>
+
+    <!--CheckBox-->
+    <Style TargetType="{x:Type CheckBox}"
+           x:Key="CheckBoxStyle">
+        <Setter Property="VerticalAlignment" 
+                Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment"
+                Value="Center"></Setter>
+    </Style>
+
+    <!--ComboBox-->
+    <Style TargetType="{x:Type ComboBox}"
+           x:Key="ComboBoxStyle">
+        <Setter Property="VerticalAlignment"
+                Value="Center"></Setter>
+        <Setter Property="VerticalContentAlignment"
+                Value="Center"></Setter>
+    </Style>
+
+</ResourceDictionary>

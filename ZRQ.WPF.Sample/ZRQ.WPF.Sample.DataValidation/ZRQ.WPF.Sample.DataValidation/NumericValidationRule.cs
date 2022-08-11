@@ -13,6 +13,11 @@ namespace ZRQ.WPF.Sample.DataValidation
         public Type ValidationType { get; set; }
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
+            if (ValidationType == null)
+            {
+                return new ValidationResult(false, $"该类型不支持");
+            }
+
             string strValue = Convert.ToString(value);
 
             if (string.IsNullOrEmpty(strValue))

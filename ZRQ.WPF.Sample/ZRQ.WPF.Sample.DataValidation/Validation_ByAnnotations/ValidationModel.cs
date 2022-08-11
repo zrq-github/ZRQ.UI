@@ -19,7 +19,7 @@ namespace Validation_ByAnnotations
             get { return _username; }
             set
             {
-                ValidateProperty(value, "Username");
+                ValidateProperty(value, nameof(Username));
                 OnPropertyChanged(ref _username, value);
             }
         }

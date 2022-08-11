@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace ZRQ.UI.Utils.Test
+namespace ZRQ.UI._Test
 {
     internal class _获取鼠标点击的对象
     {
@@ -17,7 +17,7 @@ namespace ZRQ.UI.Utils.Test
             DataGrid dataGrid = sender as DataGrid;
             if (dataGrid == null) return;
 
-            System.Windows.Point aP = e.GetPosition(dataGrid);
+            Point aP = e.GetPosition(dataGrid);
             IInputElement obj = dataGrid.InputHitTest(aP);
             DependencyObject target = obj as DependencyObject;
 

@@ -32,6 +32,19 @@ namespace ZRQ.UI.UIValidationRule
         /// </summary>
         public bool IsRightClose { get; set; } = true;
 
+        /// <summary>
+        /// 提示
+        /// </summary>
+        private string Hint { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 验证的类型
+        /// </summary>
+        /// <remarks>
+        /// 目前来说只支持 int double
+        /// </remarks>
+        public Type ValidationType { get; set; }
+
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
             if (!double.TryParse(value.ToString(), out double equalValue))
@@ -39,16 +52,30 @@ namespace ZRQ.UI.UIValidationRule
                 return new ValidationResult(false, "请输入数字");
             }
 
-            bool isMin = this.Min != double.NaN;
-            bool isMax = this.Max != double.NaN;
+            bool isMin = Min != double.NaN;
+            bool isMax = Max != double.NaN;
 
             if (isMin && !CheckMin(equalValue))
             {
-                return new ValidationResult(false, $"不满足最小值: {this.Min}");
+                if (this.IsLeftClose)
+                {
+                    return new ValidationResult(false, $"请输入大于等于 {this.Min} 的值");
+                }
+                else
+                {
+                    return new ValidationResult(false, $"请输入大于 {this.Min} 的值");
+                }
             }
             if (isMax && !CheckMax(equalValue))
             {
-                return new ValidationResult(false, $"不满足最大值: {this.Min}");
+                if (this.IsRightClose)
+                {
+                    return new ValidationResult(false, $"请输入小于等于 {this.Max} 的值");
+                }
+                else
+                {
+                    return new ValidationResult(false, $"请输入小于 {this.Max} 的值");
+                }
             }
 
             return new ValidationResult(true, null);
@@ -56,11 +83,11 @@ namespace ZRQ.UI.UIValidationRule
 
         private bool CheckMax(double value)
         {
-            if (IsRightClose && value > this.Max)
+            if (IsRightClose && value > Max)
             {
                 return false;
             }
-            if (!IsRightClose && value >= this.Max)
+            if (!IsRightClose && value >= Max)
             {
                 return false;
             }
@@ -69,11 +96,11 @@ namespace ZRQ.UI.UIValidationRule
 
         private bool CheckMin(double value)
         {
-            if (IsLeftClose && value < this.Min)
+            if (IsLeftClose && value < Min)
             {
                 return false;
             }
-            if (!IsLeftClose && value <= this.Min)
+            if (!IsLeftClose && value <= Min)
             {
                 return false;
             }

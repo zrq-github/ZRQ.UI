@@ -4,15 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ZRQ.UI;
+using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.Sample.Validation
 {
-    public class Model : ViewModelBase
+    public class Model : UIModelBase
     {
         private string name;
         private string simpleVerify;
         private string validationRule;
+        private string numericValidation = "数字类型验证";
+
+        public string NumericValidation
+        {
+            get => numericValidation; set
+            {
+                OnPropertyChanged();
+                numericValidation = value;
+            }
+        }
 
         public string Name
         {

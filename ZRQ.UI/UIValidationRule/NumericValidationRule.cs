@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.WPF.Sample_ValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
     public class NumericValidationRule : ValidationRule
     {

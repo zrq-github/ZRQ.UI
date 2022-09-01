@@ -29,6 +29,7 @@
         <DataGrid Grid.Row="1"
                   x:Name="dg_GroupSample"
                   AutoGenerateColumns="False"
+                  VirtualizingPanel.IsVirtualizingWhenGrouping="True"
                   CanUserAddRows="False"
                   CanUserSortColumns="False"
                   CanUserReorderColumns="False"
@@ -70,16 +71,6 @@
                 </Style>
             </DataGrid.Resources>
 
-            <DataGrid.GroupStyle>
-                <GroupStyle ContainerStyle="{StaticResource GroupHeaderStyle}">
-                    <GroupStyle.Panel>
-                        <ItemsPanelTemplate>
-                            <DataGridRowsPresenter />
-                        </ItemsPanelTemplate>
-                    </GroupStyle.Panel>
-                </GroupStyle>
-            </DataGrid.GroupStyle>
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="名字"
                                     x:Name="dgCol_Name"
@@ -96,6 +87,34 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
+
+                <DataGridTemplateColumn x:Name="column_TreeEle"
+                                        Header="净高值双色"
+                                        MinWidth="70">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="{Binding CheckValue}"
+                                         HorizontalAlignment="Stretch"
+                                         BorderThickness="0"
+                                         Margin="0,0,-9,0"
+                                         Panel.ZIndex="1"
+                                         Focusable="False"
+                                         Grid.Column="0" />
+                                <Label Content="{Binding LimitValue}"
+                                         HorizontalAlignment="Stretch"
+                                         BorderThickness="0"
+                                         Focusable="False"
+                                         Grid.Column="1"
+                                         Foreground="Red" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
 
                 <DataGridTextColumn Header="结果值"
                                     x:Name="dgCol_ResultValue"

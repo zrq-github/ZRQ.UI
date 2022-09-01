@@ -30,27 +30,35 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
 
             DataGroupModel dataGroupModel = new DataGroupModel();
 
-            string groupNameOne = $"分组1";
-            string groupNameTow = $"分组2";
-            string groupNameThree = $"分组3";
+            string groupNameOne = $"group_1";
+            string groupNameTow = $"group_2";
+            string groupNameThree = $"group_3";
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameOne;
-            dataGroupModel.Name = "张三";
-            dataGroupModel.IsIgnore = true;
-            dataGroupModels.Add(dataGroupModel);
+            // 分组1
+            for (int i = 0; i < 1000; i++)
+            {
+                dataGroupModel = new DataGroupModel();
+                dataGroupModel.GroupName = groupNameOne;
+                dataGroupModel.Name = $"{groupNameOne}_张三{i}";
+                dataGroupModel.IsIgnore = true;
+                dataGroupModels.Add(dataGroupModel);
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameOne;
-            dataGroupModel.Name = "李四";
-            dataGroupModel.IsIgnore = false;
-            dataGroupModels.Add(dataGroupModel);
+                dataGroupModel = new DataGroupModel();
+                dataGroupModel.GroupName = groupNameOne;
+                dataGroupModel.Name = $"{groupNameOne}_李四{i}";
+                dataGroupModel.IsIgnore = false;
+                dataGroupModels.Add(dataGroupModel);
+            }
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameTow;
-            dataGroupModel.Name = "王麻子";
-            dataGroupModel.IsIgnore = true;
-            dataGroupModels.Add(dataGroupModel);
+            for (int i = 0; i < 1000; i++)
+            {
+                dataGroupModel = new DataGroupModel();
+                dataGroupModel.GroupName = groupNameTow;
+                dataGroupModel.Name = $"{groupNameTow}_王麻子{i}";
+                dataGroupModel.IsIgnore = true;
+                dataGroupModels.Add(dataGroupModel);
+            }
+
 
             dataGroupModel = new DataGroupModel();
             dataGroupModel.GroupName = groupNameThree;

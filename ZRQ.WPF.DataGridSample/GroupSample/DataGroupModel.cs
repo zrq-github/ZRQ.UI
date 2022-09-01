@@ -74,6 +74,33 @@ public class DataGroupModel : ViewModelBase
     public string ResultValue { get => resultValue; set => resultValue = value; }
 
     /// <summary>
+    /// 检测的净高值
+    /// </summary>
+    public string CheckValue
+    {
+        get
+        {
+            return $"123/";
+        }
+        set
+        {
+
+        }
+    }
+
+    public string LimitValue
+    {
+        get
+        {
+            return $"456";
+        }
+        set
+        {
+
+        }
+    }
+
+    /// <summary>
     /// 设置划线
     /// </summary>
     public TextDecorationCollection TextDecoration

@@ -28,6 +28,7 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
             viewModel = new DataGroupViewModel();
             this.DataContext = viewModel;
         }
+
         private void AddGrouping(object sender, RoutedEventArgs e)
         {
             myView = (CollectionView)CollectionViewSource.GetDefaultView(dg_GroupSample.ItemsSource);

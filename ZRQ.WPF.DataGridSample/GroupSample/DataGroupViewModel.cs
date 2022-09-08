@@ -35,7 +35,7 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
             string groupNameThree = $"group_3";
 
             // 分组1
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 dataGroupModel = new DataGroupModel();
                 dataGroupModel.GroupName = groupNameOne;
@@ -50,7 +50,7 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
                 dataGroupModels.Add(dataGroupModel);
             }
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 dataGroupModel = new DataGroupModel();
                 dataGroupModel.GroupName = groupNameTow;

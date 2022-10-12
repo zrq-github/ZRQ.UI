@@ -4,7 +4,6 @@
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
     <SharedGUID>f50c68c1-0f1c-4490-b022-2309f76951f9</SharedGUID>
-    <AssemblyName>ZRQ.UI</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>ZRQ.UI.Shared</Import_RootNamespace>

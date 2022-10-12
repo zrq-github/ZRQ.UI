@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ZRQ.WPFTest.TV
+namespace ZRQ.UI.Test
 {
     /// <summary>
     /// Interaction logic for App.xaml

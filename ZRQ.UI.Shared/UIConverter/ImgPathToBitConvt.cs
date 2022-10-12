@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
-namespace RQ.UI.ZWPF.UIConverter
+namespace ZRQ.UI.UIConverter
 {
     /// <summary>
     /// 将图片路径转换成Bit取消对文件的占用

@@ -14,11 +14,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)ZBtn\ColorSelButton.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)ZMessageBox\MessageBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <Generator>MSBuild:Compile</Generator>
@@ -43,9 +38,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NumericValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\RangeValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ZBtn\ColorSelButton.xaml.cs">
-      <DependentUpon>ColorSelButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ZMessageBox\MeesageBoxTool.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ZMessageBox\MessageBox.xaml.cs">
       <DependentUpon>MessageBox.xaml</DependentUpon>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net45</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ZRQ.UIShareadOne\ZRQ.UIShareadOne.csproj" />
+    <ProjectReference Include="..\..\ZRQ.UIShareadTwo\ZRQ.UIShareadTwo.csproj" />
+  </ItemGroup>
+
+</Project>

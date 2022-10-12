@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZRQ.UI.ZMessageBox
+namespace ZRQ.UI.Test
 {
     /// <summary>
-    /// MessageBox.xaml 的交互逻辑
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MessageBox : Window
+    public partial class MainWindow : Window
     {
-        public MessageBox()
+        public MainWindow()
         {
             InitializeComponent();
         }

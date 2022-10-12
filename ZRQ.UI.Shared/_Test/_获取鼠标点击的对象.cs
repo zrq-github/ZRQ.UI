@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace ZRQ.UI._Test
+namespace ZRQ.UIShared._Test
 {
     internal class _获取鼠标点击的对象
     {

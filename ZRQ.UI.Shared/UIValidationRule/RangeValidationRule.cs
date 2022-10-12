@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
-namespace ZRQ.UI.UIValidationRule
+namespace ZRQ.UIShared.UIValidationRule
 {
     /// <summary>
     /// 数值范围验证

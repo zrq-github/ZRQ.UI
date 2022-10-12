@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UI.UIValidationRule
+namespace ZRQ.UIShared.UIValidationRule
 {
     internal class DoubleValidation : ValidationRule
     {

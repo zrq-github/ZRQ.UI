@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
 
-namespace ZRQ.UI.UIUtils
+namespace ZRQ.UIShared.UIUtils
 {
     /// <summary>
     /// 一些验证规则

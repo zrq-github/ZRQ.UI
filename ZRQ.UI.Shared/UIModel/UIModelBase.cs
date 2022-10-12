@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.UIModel
+namespace ZRQ.UIShared.UIModel
 {
     internal class UIModelBase : INotifyPropertyChanged
     {

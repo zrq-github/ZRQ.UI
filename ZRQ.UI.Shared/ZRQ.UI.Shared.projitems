@@ -15,6 +15,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)_Test\TColorSelButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)UICommand\RelayCommand.cs" />
@@ -34,6 +39,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NumericValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\RangeValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Test\TColorSelButton.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TColorSelButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)_Test\_获取鼠标点击的对象.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)_Test\_设置wpf的window的父窗体为当前进程主窗口句柄.cs" />
   </ItemGroup>

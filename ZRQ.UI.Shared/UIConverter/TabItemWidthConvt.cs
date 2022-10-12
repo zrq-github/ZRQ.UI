@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.UIConverter
+namespace ZRQ.UIShared.UIConverter
 {
     /// <summary>
     /// 动态计算TabItem的宽度

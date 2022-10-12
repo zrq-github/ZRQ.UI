@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace ZRQ.UI.UIConverter
+namespace ZRQ.UIShared.UIConverter
 {
     /// <summary>
     /// 将Color的颜色转换成指定字符串

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 
-namespace ZRQ.UI._Test
+namespace ZRQ.UIShared._Test
 {
     internal class _设置wpf的window的父窗体为当前进程主窗口句柄
     {

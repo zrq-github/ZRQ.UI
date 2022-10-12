@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Media;
 using System.Windows;
 
-namespace ZRQ.UI.UIUtils
+namespace ZRQ.UIShared.UIUtils
 {
     /// <summary>
     /// WPF-UI 各种找自控件

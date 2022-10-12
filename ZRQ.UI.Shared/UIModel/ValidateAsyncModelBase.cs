@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.UIModel
+namespace ZRQ.UIShared.UIModel
 {
     /// <summary>
     /// 异步验证部分逻辑

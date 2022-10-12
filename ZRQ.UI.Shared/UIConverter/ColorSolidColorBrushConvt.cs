@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace ZRQ.UI.UIConverter
+namespace ZRQ.UIShared.UIConverter
 {
     /// <summary>
     /// ColorSolidColorBrush的颜色互相转化 主要是button的背景颜色需要

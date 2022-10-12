@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ZRQ.UI.Utils
+namespace ZRQ.UIShared.Utils
 {
     /// <summary>
     /// 正则表达式的一些合集

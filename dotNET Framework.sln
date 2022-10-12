@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.csproj", "{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4B9C7263-D88A-4240-A073-B18575DA1412}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.DataGridSample", "ZRQ.WPF.DataGridSample\ZRQ.WPF.DataGridSample.csproj", "{64F3FE6F-FBF3-404F-84B2-919D1893F315}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{80F30600-722D-4DCF-9DC3-78741790B954}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI.Shared", "ZRQ.UI.Shared\ZRQ.UI.Shared.shproj", "{F50C68C1-0F1C-4490-B022-2309F76951F9}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI", "ZRQ.UI.Shared\ZRQ.UI.shproj", "{F50C68C1-0F1C-4490-B022-2309F76951F9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UIShareadOne", "ZRQ.UIShareadOne\ZRQ.UIShareadOne.csproj", "{D746AF27-A196-4242-8C44-4B08DF295E68}"
 EndProject
@@ -19,16 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UIShareadTwo", "ZRQ.UIS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.UI.Test", "Test\ZRQ.UI.Test\ZRQ.UI.Test.csproj", "{A302E63F-87F3-4A52-A511-9530DEC039C0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI.Build", "ZRQ.UI\ZRQ.UI.Build.csproj", "{38922FCD-4B54-46EF-9D9B-B517C8544D91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E9EB65F-0DF5-4B5E-A770-8320C4F55E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,7 +60,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{12895656-021b-4779-a68b-25b843959708}*SharedItemsImports = 5
-		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{3e9eb65f-0df5-4b5e-a770-8320c4f55e7d}*SharedItemsImports = 5
+		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{38922fcd-4b54-46ef-9d9b-b517c8544d91}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{a302e63f-87f3-4a52-a511-9530dec039c0}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{d746af27-a196-4242-8c44-4b08df295e68}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{f50c68c1-0f1c-4490-b022-2309f76951f9}*SharedItemsImports = 13

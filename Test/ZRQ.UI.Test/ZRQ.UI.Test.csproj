@@ -12,8 +12,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ZRQ.UIShareadOne\ZRQ.UIShareadOne.csproj" />
-    <ProjectReference Include="..\..\ZRQ.UIShareadTwo\ZRQ.UIShareadTwo.csproj" />
+    <Compile Update="_Test\TColorSelButton.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TColorSelButton.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="_Test\TColorSelButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
   <Import Project="..\..\ZRQ.UI.Shared\ZRQ.UI.Shared.projitems" Label="Shared" />

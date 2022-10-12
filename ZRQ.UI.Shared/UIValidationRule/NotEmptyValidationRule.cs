@@ -11,7 +11,7 @@ namespace ZRQ.UI.UIValidationRule
     /// <summary>
     /// 不会为空
     /// </summary>
-    public class NotEmptyValidationRule : ValidationRule
+    internal class NotEmptyValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

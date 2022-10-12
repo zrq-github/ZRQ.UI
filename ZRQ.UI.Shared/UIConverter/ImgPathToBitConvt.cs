@@ -12,7 +12,7 @@ namespace ZRQ.UI.UIConverter
     /// <summary>
     /// 将图片路径转换成Bit取消对文件的占用
     /// </summary>
-    public class ImgPathToBitConvt : System.Windows.Data.IValueConverter
+    internal class ImgPathToBitConvt : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

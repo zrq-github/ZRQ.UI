@@ -13,7 +13,7 @@ namespace ZRQ.UI.UIConverter
     /// <summary>
     /// 将图片路径转换成Bit不占用图片
     /// </summary>
-    public class StrImgConverter : System.Windows.Data.IValueConverter
+    internal class StrImgConverter : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

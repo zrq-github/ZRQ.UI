@@ -12,7 +12,7 @@ namespace ZRQ.UI.UIUtils
     /// <summary>
     /// 一些验证规则
     /// </summary>
-    public static class ValidationUtils
+    internal static class ValidationUtils
     {
         public static bool IsHasErrors(DependencyObject element)
         {

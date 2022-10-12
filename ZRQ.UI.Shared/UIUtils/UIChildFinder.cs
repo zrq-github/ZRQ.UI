@@ -10,7 +10,7 @@ namespace ZRQ.UI.UIUtils
     /// </summary>
     /// <remarks>
     /// </remarks>
-    public static class UIFinder
+    internal static class UIFinder
     {
         /// <summary>
         /// Finds a Child of a given item in the visual tree. 

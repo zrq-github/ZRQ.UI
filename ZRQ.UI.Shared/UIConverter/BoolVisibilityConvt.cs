@@ -12,7 +12,7 @@ namespace ZRQ.UI.UIConverter
     /// <summary>
     /// 将Color的颜色转换成指定字符串
     /// </summary>
-    public class BoolVisibilityConvt : System.Windows.Data.IValueConverter
+    internal class BoolVisibilityConvt : System.Windows.Data.IValueConverter
     {
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

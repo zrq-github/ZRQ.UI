@@ -9,5 +9,6 @@ namespace ZRQ.UI.Test
 {
     internal class ViewModel : UIModelBase
     {
+        public string Name { get; set; } = String.Empty;
     }
 }

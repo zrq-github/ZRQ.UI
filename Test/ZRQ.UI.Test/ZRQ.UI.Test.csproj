@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\ZRQ.UIShareadOne\ZRQ.UIShareadOne.csproj" />
     <ProjectReference Include="..\..\ZRQ.UIShareadTwo\ZRQ.UIShareadTwo.csproj" />
   </ItemGroup>
+
+  <Import Project="..\..\ZRQ.UI.Shared\ZRQ.UI.Shared.projitems" Label="Shared" />
 
 </Project>

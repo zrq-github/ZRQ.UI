@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ZRQ.UI.UIModel
 {
-    public class UIModelBase : INotifyPropertyChanged
+    internal class UIModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

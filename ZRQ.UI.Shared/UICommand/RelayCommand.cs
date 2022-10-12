@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace ZRQ.UI.UICommand
 {
-    public class RelayCommand : ICommand
+    internal class RelayCommand : ICommand
     {
         #region Variables
 
@@ -61,7 +61,7 @@ namespace ZRQ.UI.UICommand
 
         #region Support
 
-        public class CloseCommand : ICommand
+        internal class CloseCommand : ICommand
         {
             public bool CanExecute(object parameter)
             {

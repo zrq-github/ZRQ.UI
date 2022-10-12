@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace ZRQ.UI.UIValidationRule
 {
-    public class DoubleValidation : ValidationRule
+    internal class DoubleValidation : ValidationRule
     {
         public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
         {

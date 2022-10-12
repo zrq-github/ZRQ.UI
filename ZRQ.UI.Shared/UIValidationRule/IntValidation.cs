@@ -10,7 +10,7 @@ namespace ZRQ.UI.UIValidationRule
     /// <summary>
     /// 整数验证
     /// </summary>
-    public class IntValidation : System.Windows.Controls.ValidationRule
+    internal class IntValidation : System.Windows.Controls.ValidationRule
     {
         public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
         {

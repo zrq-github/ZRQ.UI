@@ -61,6 +61,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{12895656-021b-4779-a68b-25b843959708}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{3e9eb65f-0df5-4b5e-a770-8320c4f55e7d}*SharedItemsImports = 5
+		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{a302e63f-87f3-4a52-a511-9530dec039c0}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{d746af27-a196-4242-8c44-4b08df295e68}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{f50c68c1-0f1c-4490-b022-2309f76951f9}*SharedItemsImports = 13
 	EndGlobalSection

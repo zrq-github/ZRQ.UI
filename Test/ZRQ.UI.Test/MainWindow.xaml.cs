@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,15 @@ namespace ZRQ.UI.Test
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnInternal_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel viewModel = new ViewModel();
+            viewModel.Name = "JsonSerializer";
+            JsonSerializer jsonSerializer = new JsonSerializer();
+
+           string str =   JsonConvert.SerializeObject(viewModel);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace ZRQ.UI.UIValidationRule
 {
-    public class NumericValidationRule : ValidationRule
+    internal class NumericValidationRule : ValidationRule
     {
         public Type ValidationType { get; set; }
 

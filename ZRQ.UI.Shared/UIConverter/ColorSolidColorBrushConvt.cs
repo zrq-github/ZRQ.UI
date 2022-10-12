@@ -11,7 +11,7 @@ namespace ZRQ.UI.UIConverter
     /// <summary>
     /// ColorSolidColorBrush的颜色互相转化 主要是button的背景颜色需要
     /// </summary>
-    public class ColorSolidColorBrushConvt : System.Windows.Data.IValueConverter
+    internal class ColorSolidColorBrushConvt : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -12,7 +12,7 @@ namespace ZRQ.UI.UIValidationRule
     /// <summary>
     /// 邮箱验证
     /// </summary>
-    public class EmailValidationRule : ValidationRule
+    internal class EmailValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

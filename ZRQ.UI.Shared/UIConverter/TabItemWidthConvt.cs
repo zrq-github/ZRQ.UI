@@ -10,7 +10,7 @@ namespace ZRQ.UI.UIConverter
     /// <summary>
     /// 动态计算TabItem的宽度
     /// </summary>
-    public class TabItemWidthConvt : System.Windows.Data.IValueConverter
+    internal class TabItemWidthConvt : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

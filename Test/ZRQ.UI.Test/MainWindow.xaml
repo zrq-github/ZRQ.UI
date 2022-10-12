@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZRQ.UI.Test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="200">
+    <StackPanel>
+        <Button x:Name="btnInternal" Content="序列化internal对象" Click="btnInternal_Click" ></Button>
+        
+    </StackPanel>
 </Window>

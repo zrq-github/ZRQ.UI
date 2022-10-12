@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f50c68c1-0f1c-4490-b022-2309f76951f9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ZRQ.UI.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ValidateErrorStyles.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ZBtn\ColorSelButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ZMessageBox\MessageBox.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)UICommand\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolVisibilityConvt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\StrImgConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIModel\UIModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIChildFinder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\ValidationUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\DoubleValidation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\EmailValidationRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\IntValidation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NotEmptyValidationRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NumericValidationRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\RangeValidationRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ZBtn\ColorSelButton.xaml.cs">
+      <DependentUpon>ColorSelButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ZMessageBox\MeesageBoxTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ZMessageBox\MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)_Test\_获取鼠标点击的对象.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Test\_设置wpf的window的父窗体为当前进程主窗口句柄.cs" />
+  </ItemGroup>
+</Project>

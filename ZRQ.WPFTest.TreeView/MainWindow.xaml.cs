@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZRQ.WPFTest.TreeView
+namespace ZRQ.WPFTest.TV
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,6 +31,33 @@ namespace ZRQ.WPFTest.TreeView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ViewModel.InitTree();
+        }
+
+        private void TreeView_MouseMove(object sender, MouseEventArgs e)
+        {
+            TreeView treeView = sender as TreeView;
+            System.Windows.Point aP = e.GetPosition(treeView);
+            IInputElement obj = treeView.InputHitTest(aP);
+            DependencyObject target = obj as DependencyObject;
+
+            TreeViewItem treeViewItem = null;
+            DataGridRow dataGridRow = null;
+            while (target != null)
+            {
+                if (target is DataGridRow)
+                {
+                    dataGridRow = (DataGridRow)target;
+                    break;
+                }
+                if (target is TreeViewItem)
+                {
+                    treeViewItem = (TreeViewItem)target;
+                    var a = treeViewItem.DataContext;
+                }
+
+                target = VisualTreeHelper.GetParent(target);
+            }
+            e.Handled = true;
         }
     }
 }

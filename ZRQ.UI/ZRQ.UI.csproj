@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -13,5 +13,7 @@
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
+
+  <Import Project="..\ZRQ.UI.Shared\ZRQ.UI.Shared.projitems" Label="Shared" />
 
 </Project>

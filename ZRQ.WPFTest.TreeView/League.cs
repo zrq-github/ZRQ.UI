@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ZRQ.WPFTest.TreeView
+namespace ZRQ.WPFTest.TV
 {
     public class League
     {

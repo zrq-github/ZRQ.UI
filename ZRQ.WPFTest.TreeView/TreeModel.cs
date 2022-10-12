@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ZRQ.UI.UIModel;
 
-namespace ZRQ.WPFTest.TreeView
+namespace ZRQ.WPFTest.TV
 {
     public class TreeModel : UIModelBase
     {

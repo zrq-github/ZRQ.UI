@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.DataGridSample", "Z
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{80F30600-722D-4DCF-9DC3-78741790B954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPFTest.TreeView", "ZRQ.WPFTest.TreeView\ZRQ.WPFTest.TreeView.csproj", "{079F9095-C11D-4779-B41A-53600F3CE75C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPFTest.TV", "ZRQ.WPFTest.TreeView\ZRQ.WPFTest.TV.csproj", "{079F9095-C11D-4779-B41A-53600F3CE75C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI.Shared", "ZRQ.UI.Shared\ZRQ.UI.Shared.shproj", "{F50C68C1-0F1C-4490-B022-2309F76951F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,5 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE0989A1-3B0F-4575-AC91-F95915006434}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{3e9eb65f-0df5-4b5e-a770-8320c4f55e7d}*SharedItemsImports = 5
+		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{f50c68c1-0f1c-4490-b022-2309f76951f9}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

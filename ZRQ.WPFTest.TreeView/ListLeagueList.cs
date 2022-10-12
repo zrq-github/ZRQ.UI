@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ZRQ.WPFTest.TreeView
+namespace ZRQ.WPFTest.TV
 {
     public class ListLeagueList : List<League>
     {

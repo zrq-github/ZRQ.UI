@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.WPFTest.TreeView
+namespace ZRQ.WPFTest.TV
 {
     public class ViewModel
     {

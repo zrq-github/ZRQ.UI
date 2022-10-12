@@ -24,7 +24,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\UIModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIChildFinder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\ValidationUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\DoubleValidation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\EmailValidationRule.cs" />

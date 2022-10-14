@@ -18,9 +18,9 @@ namespace ZRQ.WPF.TreeViewSample
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TreeWindows : Window
     {
-        public MainWindow()
+        public TreeWindows()
         {
             InitializeComponent();
         }

@@ -7,12 +7,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
     /// <summary>
     /// 邮箱验证
     /// </summary>
-    internal class EmailValidationRule : ValidationRule
+    public class EmailValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

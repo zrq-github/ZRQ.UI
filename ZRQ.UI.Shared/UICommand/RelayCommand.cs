@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace ZRQ.UIShared.UICommand
+namespace ZRQ.UI.UICommand
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         #region Variables
 
@@ -61,7 +61,7 @@ namespace ZRQ.UIShared.UICommand
 
         #region Support
 
-        internal class CloseCommand : ICommand
+        public class CloseCommand : ICommand
         {
             public bool CanExecute(object parameter)
             {

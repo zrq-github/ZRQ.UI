@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
-    internal class NumericValidationRule : ValidationRule
+    public class NumericValidationRule : ValidationRule
     {
         public Type ValidationType { get; set; }
 

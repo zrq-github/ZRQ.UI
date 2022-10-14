@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZRQ.UIShared.Test
+namespace ZRQ.UI.Test
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

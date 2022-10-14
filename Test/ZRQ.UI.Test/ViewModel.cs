@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ZRQ.UIShared.UIModel;
+using ZRQ.UI.UIModel;
 
-namespace ZRQ.UIShared.Test
+namespace ZRQ.UI.Test
 {
     internal class ViewModel : UIModelBase
     {

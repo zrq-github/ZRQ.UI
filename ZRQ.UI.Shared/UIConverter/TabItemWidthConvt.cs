@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UIShared.UIConverter
+namespace ZRQ.UI.UIConverter
 {
     /// <summary>
     /// 动态计算TabItem的宽度
     /// </summary>
-    internal class TabItemWidthConvt : System.Windows.Data.IValueConverter
+    public class TabItemWidthConvt : System.Windows.Data.IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

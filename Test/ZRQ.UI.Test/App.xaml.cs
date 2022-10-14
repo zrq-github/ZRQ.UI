@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ZRQ.UIShared.Test
+namespace ZRQ.UI.Test
 {
     /// <summary>
     /// Interaction logic for App.xaml

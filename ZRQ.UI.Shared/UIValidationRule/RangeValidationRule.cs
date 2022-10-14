@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
     /// <summary>
     /// 数值范围验证
@@ -17,7 +17,7 @@ namespace ZRQ.UIShared.UIValidationRule
     /// 有最小值,无最大值 默认 大于等于最小值
     /// 无最小值,有最大致 默认 小于等于最大值
     /// </remarks>
-    internal class RangeValidationRule : ValidationRule
+    public class RangeValidationRule : ValidationRule
     {
         public double Min { get; set; } = double.NaN;
         public double Max { get; set; } = double.NaN;

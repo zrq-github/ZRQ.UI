@@ -6,12 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
     /// <summary>
     /// 不会为空
     /// </summary>
-    internal class NotEmptyValidationRule : ValidationRule
+    public class NotEmptyValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

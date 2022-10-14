@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace ZRQ.UIShared.UIConverter
+namespace ZRQ.UI.UIConverter
 {
     /// <summary>
     /// 将Color的颜色转换成指定字符串
     /// </summary>
-    internal class BoolVisibilityConvt : System.Windows.Data.IValueConverter
+    public class BoolVisibilityConvt : System.Windows.Data.IValueConverter
     {
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

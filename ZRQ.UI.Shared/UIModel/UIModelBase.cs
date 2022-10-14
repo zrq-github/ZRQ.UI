@@ -9,9 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.UIShared.UIModel
+namespace ZRQ.UI.UIModel
 {
-    internal class UIModelBase : INotifyPropertyChanged
+    public class UIModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

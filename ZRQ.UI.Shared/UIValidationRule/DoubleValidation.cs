@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
-    internal class DoubleValidation : ValidationRule
+    public class DoubleValidation : ValidationRule
     {
         public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
         {

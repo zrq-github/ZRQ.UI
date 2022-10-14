@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace ZRQ.UIShared.UIValidationRule
+namespace ZRQ.UI.UIValidationRule
 {
     /// <summary>
     /// 整数验证
     /// </summary>
-    internal class IntValidation : System.Windows.Controls.ValidationRule
+    public class IntValidation : System.Windows.Controls.ValidationRule
     {
         public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
         {

@@ -5,7 +5,7 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>latest</LangVersion>
-    <AssemblyName>ZRQ.UI.Net45</AssemblyName>
+    <AssemblyName>ZRQ.UI</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

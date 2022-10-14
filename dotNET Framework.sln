@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UIShareadTwo", "ZRQ.UIS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI.Test", "Test\ZRQ.UI.Test\ZRQ.UI.Test.csproj", "{A302E63F-87F3-4A52-A511-9530DEC039C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI.Build", "ZRQ.UI\ZRQ.UI.Build.csproj", "{38922FCD-4B54-46EF-9D9B-B517C8544D91}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreePage", "TreePage\TreePage.csproj", "{6AAF4684-15E3-431D-A08C-BD0FABF17C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPF.TreeViewSample", "ZRQ.WPF.TreeViewSample\ZRQ.WPF.TreeViewSample.csproj", "{48623401-6D48-4540-866D-412C725F20EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TreeViewSample", "ZRQ.WPF.TreeViewSample\ZRQ.WPF.TreeViewSample.csproj", "{48623401-6D48-4540-866D-412C725F20EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.csproj", "{F772E006-D342-4FB1-A340-0A2FF336A86F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +33,8 @@ Global
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F3FE6F-FBF3-404F-84B2-919D1893F315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50C68C1-0F1C-4490-B022-2309F76951F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50C68C1-0F1C-4490-B022-2309F76951F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D746AF27-A196-4242-8C44-4B08DF295E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D746AF27-A196-4242-8C44-4B08DF295E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D746AF27-A196-4242-8C44-4B08DF295E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,10 +47,6 @@ Global
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A302E63F-87F3-4A52-A511-9530DEC039C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38922FCD-4B54-46EF-9D9B-B517C8544D91}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AAF4684-15E3-431D-A08C-BD0FABF17C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AAF4684-15E3-431D-A08C-BD0FABF17C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AAF4684-15E3-431D-A08C-BD0FABF17C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +55,10 @@ Global
 		{48623401-6D48-4540-866D-412C725F20EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48623401-6D48-4540-866D-412C725F20EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48623401-6D48-4540-866D-412C725F20EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F772E006-D342-4FB1-A340-0A2FF336A86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F772E006-D342-4FB1-A340-0A2FF336A86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F772E006-D342-4FB1-A340-0A2FF336A86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F772E006-D342-4FB1-A340-0A2FF336A86F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,8 +75,8 @@ Global
 		SolutionGuid = {CE0989A1-3B0F-4575-AC91-F95915006434}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{38922fcd-4b54-46ef-9d9b-b517c8544d91}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{a302e63f-87f3-4a52-a511-9530dec039c0}*SharedItemsImports = 5
 		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{f50c68c1-0f1c-4490-b022-2309f76951f9}*SharedItemsImports = 13
+		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{f772e006-d342-4fb1-a340-0a2ff336a86f}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

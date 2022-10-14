@@ -25,4 +25,26 @@ namespace ZRQ.WPF.TreeViewSample
             InitializeComponent();
         }
     }
+
+    public class TreeNodeDataTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate NodeCommondTemplate { get; set; }
+        public DataTemplate NodeCategoryTemplate { get; set; }
+
+        public override DataTemplate SelectTemplate(object item, DependencyObject container)
+        {
+            //CodingNodeModel nodeModel = item as CodingNodeModel;
+            //if (null == nodeModel)
+            //{
+            //    return base.SelectTemplate(item, container);
+            //}
+
+            //if (nodeModel.CodingNoteType == DB.CodingNoteType.Category)
+            //{
+            //    return NodeCategoryTemplate;
+            //}
+
+            return NodeCommondTemplate;
+        }
+    }
 }

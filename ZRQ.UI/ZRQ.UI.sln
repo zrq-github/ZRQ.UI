@@ -1,25 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.32002.185
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI", "ZRQ.UI.csproj", "{A618F15E-5718-431D-A5E0-71B0AE9B8B65}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI", "ZRQ.UI.shproj", "{85F9923F-816E-4493-9948-0AA792555239}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A618F15E-5718-431D-A5E0-71B0AE9B8B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A618F15E-5718-431D-A5E0-71B0AE9B8B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A618F15E-5718-431D-A5E0-71B0AE9B8B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A618F15E-5718-431D-A5E0-71B0AE9B8B65}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {00476FF1-939E-45EA-93AD-AAB74FEEDEFF}
+		SolutionGuid = {07533D54-121A-4119-95D4-EDE71D0B16CE}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ZRQ.UI.projitems*{85f9923f-816e-4493-9948-0aa792555239}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

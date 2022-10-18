@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace ZRQ.UI.UICommand
+namespace ZRQ.UI.UICommands
 {
     public class RelayCommand : ICommand
     {

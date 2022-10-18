@@ -28,6 +28,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)UICommands\CloseCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CommandBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConvt.cs" />

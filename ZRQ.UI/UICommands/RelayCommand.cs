@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace ZRQ.UI.UICommands
 {
-    public class RelayCommand : ICommand
+    public partial class RelayCommand : ICommand
     {
         #region Variables
 
@@ -56,30 +55,6 @@ namespace ZRQ.UI.UICommands
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
         }
-
         #endregion Implementation
-
-        #region Support
-
-        public class CloseCommand : ICommand
-        {
-            public bool CanExecute(object parameter)
-            {
-                return true;
-            }
-
-            public event EventHandler CanExecuteChanged
-            {
-                add => CommandManager.RequerySuggested += value;
-                remove => CommandManager.RequerySuggested -= value;
-            }
-
-            public void Execute(object parameter)
-            {
-                if (parameter is Window myWin) myWin.Close();
-            }
-        }
-
-        #endregion Support
     }
 }

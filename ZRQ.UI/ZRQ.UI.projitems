@@ -30,6 +30,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CloseCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CommandBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UICommands\MakeReservationCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
@@ -45,6 +46,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NotEmptyValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NumericValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\RangeValidationRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ConsoleManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ShellMessageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ShellUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\" />
   </ItemGroup>
 </Project>

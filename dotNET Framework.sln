@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGGroupSortFilterExample", 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.shproj", "{85F9923F-816E-4493-9948-0AA792555239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.UI.Build", "ZRQ.UI.Build\ZRQ.UI.Build.csproj", "{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI.Build", "ZRQ.UI.Build\ZRQ.UI.Build.csproj", "{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +82,5 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ZRQ.UI\ZRQ.UI.projitems*{4ec87d37-3748-4a13-85c5-e4cdee8e5efe}*SharedItemsImports = 5
 		ZRQ.UI\ZRQ.UI.projitems*{85f9923f-816e-4493-9948-0aa792555239}*SharedItemsImports = 13
-		ZRQ.UI.Shared\ZRQ.UI.Shared.projitems*{a302e63f-87f3-4a52-a511-9530dec039c0}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

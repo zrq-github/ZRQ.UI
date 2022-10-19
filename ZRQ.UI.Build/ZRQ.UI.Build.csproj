@@ -10,6 +10,10 @@
   <Import Project="..\ZRQ.UI\ZRQ.UI.projitems" Label="Shared" />
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Windows.Forms" />

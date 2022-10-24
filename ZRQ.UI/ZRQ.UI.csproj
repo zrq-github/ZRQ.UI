@@ -9,15 +9,6 @@
   <Import Project="..\ZRQ.UI.Share\ZRQ.UI.Share.projitems" Label="Shared" />
 
   <ItemGroup>
-    <Compile Remove="ComponentCategoryFilterUserControl.xaml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Remove="ComponentCategoryFilterUserControl.xaml" />
-    <Page Remove="ResourceDictionary_HighlightLabel.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 

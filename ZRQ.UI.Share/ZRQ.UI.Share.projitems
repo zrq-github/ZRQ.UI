@@ -3,34 +3,11 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>85f9923f-816e-4493-9948-0aa792555239</SharedGUID>
+    <SharedGUID>dbac908e-1781-40fe-b7e5-2a869e4c322c</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>ZRQ.UI</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ColorButtonStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)UIStyles\DateGridStyles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)UIStyles\DefaultStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ImageStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ValidateErrorStyles.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CloseCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CommandBase.cs" />
@@ -42,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\UIModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\ValidationUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\DoubleValidation.cs" />
@@ -51,11 +29,31 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\NumericValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\RangeValidationRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ConsoleManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ShellMessageType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\ShellUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\RegexMatch.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Utils\DebugUtils\" />
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ColorButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\DateGridStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\DefaultStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ImageStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\ValidateErrorStyles.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

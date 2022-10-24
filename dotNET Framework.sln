@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoData", "Sample\DemoData
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGGroupSortFilterExample", "Test\DGGroupSortFilterExample\DGGroupSortFilterExample.csproj", "{DA096F4B-FCB2-4D35-9ED4-64C04B9B27F9}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.shproj", "{85F9923F-816E-4493-9948-0AA792555239}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ZRQ.UI.Share", "ZRQ.UI.Share\ZRQ.UI.Share.shproj", "{DBAC908E-1781-40FE-B7E5-2A869E4C322C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI.Build", "ZRQ.UI.Build\ZRQ.UI.Build.csproj", "{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.csproj", "{EDDA7264-9713-4547-A9EF-27F05E30D02B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{DA096F4B-FCB2-4D35-9ED4-64C04B9B27F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA096F4B-FCB2-4D35-9ED4-64C04B9B27F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA096F4B-FCB2-4D35-9ED4-64C04B9B27F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EC87D37-3748-4A13-85C5-E4CDEE8E5EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,7 +80,7 @@ Global
 		SolutionGuid = {CE0989A1-3B0F-4575-AC91-F95915006434}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		ZRQ.UI\ZRQ.UI.projitems*{4ec87d37-3748-4a13-85c5-e4cdee8e5efe}*SharedItemsImports = 5
-		ZRQ.UI\ZRQ.UI.projitems*{85f9923f-816e-4493-9948-0aa792555239}*SharedItemsImports = 13
+		ZRQ.UI.Share\ZRQ.UI.Share.projitems*{dbac908e-1781-40fe-b7e5-2a869e4c322c}*SharedItemsImports = 13
+		ZRQ.UI.Share\ZRQ.UI.Share.projitems*{edda7264-9713-4547-a9ef-27f05e30d02b}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

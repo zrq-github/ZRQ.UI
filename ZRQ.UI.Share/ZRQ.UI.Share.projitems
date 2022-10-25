@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TreeViewUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\ValidationUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIValidationRule\DoubleValidation.cs" />

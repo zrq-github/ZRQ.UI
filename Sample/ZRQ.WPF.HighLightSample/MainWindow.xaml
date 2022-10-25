@@ -7,11 +7,53 @@
         xmlns:ui="clr-namespace:ZRQ.UI.Controls;assembly=ZRQ.UI"
         mc:Ignorable="d"
         Title="测试高亮构件"
-        Height="150"
+        Height="280"
         Width="240">
     <Window.DataContext>
         <local:ViewModel></local:ViewModel>
     </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <local:TreeNodeDataTemplateSelector x:Key="TreeNodeDataTemplateSelector">
+                <local:TreeNodeDataTemplateSelector.NodeCommondTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type local:TreeModel}"
+                                              ItemsSource="{Binding Childrens}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="分层模板二 - 一"></TextBlock>
+                            <ui:HighlightTextBlock Margin="2,0,0,0"
+                                                   Grid.Column="1"
+                                                   Text="{Binding Name}"
+                                                   HighlightBackground="Green"
+                                                   HighlightForeground="Yellow"
+                                                   HighlightTest="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TreeView}}, Path=DataContext.SearchText}" />
+                        </Grid>
+                    </HierarchicalDataTemplate>
+                </local:TreeNodeDataTemplateSelector.NodeCommondTemplate>
+                <local:TreeNodeDataTemplateSelector.NodeCategoryTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type local:TreeModel}"
+                                              ItemsSource="{Binding Childrens}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="分层模板二 - 二"></TextBlock>
+                            <ui:HighlightTextBlock Margin="2,0,0,0"
+                                                   Grid.Column="1"
+                                                   Text="{Binding Name}"
+                                                   HighlightBackground="Green"
+                                                   HighlightForeground="Red"
+                                                   HighlightTest="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TreeView}}, Path=DataContext.SearchText}" />
+                        </Grid>
+                    </HierarchicalDataTemplate>
+                </local:TreeNodeDataTemplateSelector.NodeCategoryTemplate>
+            </local:TreeNodeDataTemplateSelector>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <StackPanel>
             <TextBox x:Name="tb_Search"
@@ -21,6 +63,45 @@
             <ui:HighlightTextBlock x:Name="htb"
                                    Text="SearchText"
                                    HighlightTest="{Binding SearchText}"></ui:HighlightTextBlock>
+            <TreeView>
+                <TreeViewItem Header="直接写的TreeViewItem">
+                    <ui:HighlightTextBlock Text="SearchText"
+                                           HighlightTest="{Binding SearchText}"></ui:HighlightTextBlock>
+                    <ui:HighlightTextBlock Text="SearchText"
+                                           HighlightTest="{Binding SearchText}"></ui:HighlightTextBlock>
+                </TreeViewItem>
+            </TreeView>
+            <TreeView ItemsSource="{Binding TreeModels}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Childrens}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="分层模板的第一种写法"></TextBlock>
+                            <ui:HighlightTextBlock Margin="2,0,0,0"
+                                                   Grid.Column="1"
+                                                   Text="{Binding Name}"
+                                                   HighlightBackground="Black"
+                                                   HighlightForeground="Red"
+                                                   HighlightTest="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TreeView}}, Path=DataContext.SearchText}" />
+                        </Grid>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="TreeViewItem">
+                        <Setter Property="IsExpanded"
+                                Value="True" />
+                        <Setter Property="Visibility"
+                                Value="Visible"></Setter>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+
+            <TreeView ItemsSource="{Binding TreeModels}"
+                      ItemTemplateSelector="{StaticResource TreeNodeDataTemplateSelector}">
+            </TreeView>
         </StackPanel>
     </Grid>
 </Window>

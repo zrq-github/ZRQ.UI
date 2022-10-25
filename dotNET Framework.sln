@@ -27,8 +27,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.UI", "ZRQ.UI\ZRQ.UI.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.HighLightSample", "Sample\ZRQ.WPF.HighLightSample\ZRQ.WPF.HighLightSample.csproj", "{290E7711-28CA-4A5A-94BF-95F520BCC67B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{FE0ED643-AF5C-4360-9A6B-CE39D71B4506}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +69,6 @@ Global
 		{290E7711-28CA-4A5A-94BF-95F520BCC67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290E7711-28CA-4A5A-94BF-95F520BCC67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290E7711-28CA-4A5A-94BF-95F520BCC67B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE0ED643-AF5C-4360-9A6B-CE39D71B4506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE0ED643-AF5C-4360-9A6B-CE39D71B4506}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE0ED643-AF5C-4360-9A6B-CE39D71B4506}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE0ED643-AF5C-4360-9A6B-CE39D71B4506}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

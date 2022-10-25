@@ -18,7 +18,7 @@ namespace ZRQ.UI.UIModel
     /// 这种通知方式, 并不会对将验证规则下载xaml中的时候生效,
     /// 因为如果在xaml中写了验证规则, 如果验证规则为false, 这里是不会被调用的
     /// </remarks>
-    public class ValidateAsyncModelBase : UIModelBase, INotifyDataErrorInfo
+    public class ValidateAsyncModelBase : ViewModelBase, INotifyDataErrorInfo
     {
         public override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

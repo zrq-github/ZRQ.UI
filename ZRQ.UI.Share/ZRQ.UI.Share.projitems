@@ -17,7 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UIModel\UIModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIModel\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />

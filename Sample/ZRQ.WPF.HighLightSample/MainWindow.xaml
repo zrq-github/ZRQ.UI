@@ -1,0 +1,26 @@
+﻿<Window x:Class="ZRQ.WPF.HighLightSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZRQ.WPF.HighLightSample"
+        xmlns:ui="clr-namespace:ZRQ.UI.Controls;assembly=ZRQ.UI"
+        mc:Ignorable="d"
+        Title="测试高亮构件"
+        Height="150"
+        Width="240">
+    <Window.DataContext>
+        <local:ViewModel></local:ViewModel>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel>
+            <TextBox x:Name="tb_Search"
+                     ToolTip="SearchText"
+                     d:Text="SearchText"
+                     Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <ui:HighlightTextBlock x:Name="htb"
+                                   Text="SearchText"
+                                   HighlightTest="{Binding SearchText}"></ui:HighlightTextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

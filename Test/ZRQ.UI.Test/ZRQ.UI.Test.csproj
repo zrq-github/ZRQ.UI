@@ -1,11 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿  <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net45</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_Test\TColorSelButton.xaml.cs" />
+    <Compile Remove="_Test\_获取鼠标点击的对象.cs" />
+    <Compile Remove="_Test\_设置wpf的window的父窗体为当前进程主窗口句柄.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="_Test\TColorSelButton.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -13,19 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="_Test\TColorSelButton.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>TColorSelButton.xaml</DependentUpon>
-    </Compile>
+    <Folder Include="_Test\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Page Update="_Test\TColorSelButton.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-
-  <Import Project="..\..\ZRQ.UI.Shared\ZRQ.UI.Shared.projitems" Label="Shared" />
+  <Import Project="..\..\ZRQ.UI.Share\ZRQ.UI.Share.projitems" Label="Shared" />
 
 </Project>

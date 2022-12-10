@@ -29,11 +29,8 @@ namespace ZRQ.UI.Test
 
         private void btnInternal_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel viewModel = new ViewModel();
-            viewModel.Name = "JsonSerializer";
-            JsonSerializer jsonSerializer = new JsonSerializer();
-
-           string str =   JsonConvert.SerializeObject(viewModel);
+            EnumTestView applyParmView = new();
+            applyParmView.Show();
         }
     }
 }

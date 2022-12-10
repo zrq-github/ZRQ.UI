@@ -1,0 +1,69 @@
+﻿<Window x:Class="ZRQ.UI.Test.EnumTestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZRQ.UI.Test"
+        xmlns:converter="clr-namespace:ZRQ.UI.UIConverter"
+        mc:Ignorable="d"
+        x:Name="win"
+        d:DataContext="{Binding ElementName=win}"
+        Topmost="True"
+        Title="应用到族属性" 
+        Height="400" 
+        Width="500">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <converter:EnumDescriptionConverter x:Key="enumConverter" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="注：仅支持应用于有编辑权限的构件！"
+                   Grid.Row="0"
+                   Margin="10,5,5,5"
+                   Foreground="Red"></TextBlock>
+        <DataGrid Grid.Row="1"
+                  Margin="5,5,5,5"
+                  x:Name="dataGrid"
+                  ItemsSource="{Binding CodingParams}"
+                  CanUserSortColumns="False"
+                  CanUserDeleteRows="False"
+                  CanUserResizeRows="False"
+                  CanUserAddRows="False"
+                  AutoGenerateColumns="False"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="参数名称"
+                                    Width="1*"
+                                    Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Revit参数类型"
+                                        Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox 
+                                ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.RvtParamTypes}"
+                                SelectedItem="{Binding RvtParmType}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource enumConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Grid.Row="2"
+                  ItemsSource="{Binding RvtParamTypes}"></ComboBox>
+    </Grid>
+</Window>

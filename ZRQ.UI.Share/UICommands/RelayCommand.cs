@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace ZRQ.UI.UICommands
 {
-    public partial class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         #region Variables
 

@@ -10,8 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CloseCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UICommands\CommandBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UICommands\MakeReservationCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
@@ -19,7 +17,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ViewModelBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UIModel\ValidateAsyncModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TreeViewUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />

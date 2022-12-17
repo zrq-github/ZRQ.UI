@@ -1,79 +1,81 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZRQ.UI.UIModel
 {
-    public class ViewModelBase : INotifyPropertyChanged
+    internal class ViewModelBase
+        : INotifyPropertyChanged
+        , INotifyDataErrorInfo
+        , IDataErrorInfo
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        private readonly Dictionary<string, IList<string>> _validationErrors = new Dictionary<string, IList<string>>();
 
-        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public string Error => string.Join(Environment.NewLine, GetAllErrors());
+
+        public bool HasErrors => _validationErrors.Any();
+
+        public string this[string propertyName]
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(propertyName))
+                    return Error;
+
+                if (_validationErrors.ContainsKey(propertyName))
+                    return string.Join(Environment.NewLine, _validationErrors[propertyName]);
+
+                return string.Empty;
+            }
+        }
+
+        public void AddValidationError(string propertyName, string errorMessage)
+        {
+            if (!_validationErrors.ContainsKey(propertyName))
+                _validationErrors.Add(propertyName, new List<string>());
+
+            _validationErrors[propertyName].Add(errorMessage);
+        }
+
+        public void ClearValidationErrors(string propertyName)
+        {
+            if (_validationErrors.ContainsKey(propertyName))
+                _validationErrors.Remove(propertyName);
+        }
+
+        public IEnumerable GetErrors(string propertyName)
+        {
+            if (string.IsNullOrEmpty(propertyName))
+                return _validationErrors.SelectMany(kvp => kvp.Value);
+
+            return _validationErrors.TryGetValue(propertyName, out var errors) ? errors : Enumerable.Empty<object>();
+        }
+
+        protected void RaisePropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        protected virtual void OnPropertyChanged(string propertyName, object oldValue, object newValue)
+        protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = "")
         {
-            OnPropertyChanged(propertyName);
-        }
-
-        public virtual void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "")
-        {
-            property = value;
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        /// <summary>
-        /// Sets the property value.
-        /// </summary>
-        /// <typeparam name="T">The type of the property.</typeparam>
-        /// <param name="field">The field.</param>
-        /// <param name="value">The value.</param>
-        /// <param name="propertyName">Name of the property.</param>
-        /// <returns>
-        /// True if the property was set.
-        /// </returns>
-        /// <remarks>This method uses the CallerMemberNameAttribute to determine the property name.</remarks>
-        protected bool SetValue<T>(ref T field, T value, [CallerMemberName] string propertyName = "")
-        {
-            // ReSharper disable once RedundantNameQualifier
-            if (Equals(field, value))
-            {
+            if (EqualityComparer<T>.Default.Equals(storage, value))
                 return false;
-            }
-            VerifyProperty(propertyName);
-            //// this.OnPropertyChanging(propertyName, field, value);
-            var oldValue = field;
-            field = value;
-            OnPropertyChanged(propertyName, oldValue, value);
+
+            storage = value;
+            RaisePropertyChanged(propertyName);
             return true;
         }
 
-        /// <summary>
-        /// Verifies the property name.
-        /// </summary>
-        /// <param name="propertyName">Name of the property.</param>
-        [Conditional("DEBUG")]
-        private void VerifyProperty(string propertyName)
+        private IEnumerable<string> GetAllErrors()
         {
-            var type = GetType();
-
-            // Look for a public property with the specified name.
-            var propertyInfo = type.GetTypeInfo().GetDeclaredProperty(propertyName);
-
-            Debug.Assert(propertyInfo != null, string.Format(CultureInfo.InvariantCulture, "{0} is not a property of {1}", propertyName, type.FullName));
+            return _validationErrors.SelectMany(kvp => kvp.Value).Where(e => !string.IsNullOrEmpty(e));
         }
     }
 }

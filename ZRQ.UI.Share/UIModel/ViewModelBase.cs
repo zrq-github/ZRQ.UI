@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace ZRQ.UI.UIModel
 {
-    internal class ViewModelBase
+    public class ViewModelBase
         : INotifyPropertyChanged
         , INotifyDataErrorInfo
         , IDataErrorInfo

@@ -12,9 +12,25 @@ namespace ZRQ.UI.UIConverter
 {
     public class EnumDescriptionConverter : IValueConverter
     {
+        public static readonly EnumDescriptionConverter Instance = new();
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            Enum myEnum = (Enum)value;
+            string description = GetEnumDescription(myEnum);
+            return description;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return string.Empty;
+        }
+
         private string GetEnumDescription(Enum enumObj)
         {
-            FieldInfo fieldInfo = enumObj.GetType().GetField(enumObj.ToString());
+            Type type = enumObj.GetType();
+            FieldInfo? fieldInfo = type.GetField(enumObj.ToString());
+            if (null == fieldInfo) return enumObj.ToString();
 
             object[] attribArray = fieldInfo.GetCustomAttributes(false);
 
@@ -27,18 +43,6 @@ namespace ZRQ.UI.UIConverter
                 DescriptionAttribute? attrib = attribArray[0] as DescriptionAttribute;
                 return attrib?.Description ?? string.Empty;
             }
-        }
-
-        object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            Enum myEnum = (Enum)value;
-            string description = GetEnumDescription(myEnum);
-            return description;
-        }
-
-        object IValueConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return string.Empty;
         }
     }
 }

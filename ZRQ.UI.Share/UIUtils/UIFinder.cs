@@ -8,23 +8,23 @@ namespace ZRQ.UI.UIUtils
     /// <summary>
     /// WPF-UI 各种找自控件
     /// </summary>
-    /// <remarks>
-    /// </remarks>
+    /// <remarks> </remarks>
     internal static class UIFinder
     {
         /// <summary>
-        /// Finds a Child of a given item in the visual tree. 
+        /// Finds a Child of a given item in the visual tree.
         /// </summary>
-        /// <param name="parent">A direct parent of the queried item.</param>
-        /// <typeparam name="T">The type of the queried item.</typeparam>
-        /// <param name="childName">x:Name or Name of child. </param>
-        /// <returns>The first parent item that matches the submitted type parameter. 
-        /// If not matching item can be found, 
-        /// a null parent is being returned.</returns>
+        /// <param name="parent"> A direct parent of the queried item. </param>
+        /// <typeparam name="T"> The type of the queried item. </typeparam>
+        /// <param name="childName"> x:Name or Name of child. </param>
+        /// <returns>
+        /// The first parent item that matches the submitted type parameter. If not matching item
+        /// can be found, a null parent is being returned.
+        /// </returns>
         public static T FindChild<T>(DependencyObject parent, string childName)
            where T : DependencyObject
         {
-            // Confirm parent and childName are valid. 
+            // Confirm parent and childName are valid.
             if (parent == null) return null;
 
             T foundChild = null;
@@ -40,7 +40,7 @@ namespace ZRQ.UI.UIUtils
                     // recursively drill down the tree
                     foundChild = FindChild<T>(child, childName);
 
-                    // If the child is found, break so we do not overwrite the found child. 
+                    // If the child is found, break so we do not overwrite the found child.
                     if (foundChild != null) break;
                 }
                 else if (!string.IsNullOrEmpty(childName))
@@ -67,13 +67,13 @@ namespace ZRQ.UI.UIUtils
         /// <summary>
         /// 找到子对象, 通过绑定的属性
         /// </summary>
-        /// <param name="parent">父控件</param>
-        /// <param name="dp">控件的属性</param>
-        /// <param name="bindName">绑定的属性的名字</param>
+        /// <param name="parent"> 父控件 </param>
+        /// <param name="dp"> 控件的属性 </param>
+        /// <param name="bindName"> 绑定的属性的名字 </param>
         public static T FindChild<T>(DependencyObject parent, DependencyProperty dp, string bindName)
             where T : DependencyObject
         {
-            // Confirm parent and childName are valid. 
+            // Confirm parent and childName are valid.
             if (parent == null) return null;
             if (dp == null) return null;
 
@@ -89,7 +89,7 @@ namespace ZRQ.UI.UIUtils
                 {
                     // recursively drill down the tree
                     foundChild = FindChild<T>(child, dp, bindName);
-                    // If the child is found, break so we do not overwrite the found child. 
+                    // If the child is found, break so we do not overwrite the found child.
                     if (foundChild != null) break;
                 }
                 else if (!string.IsNullOrEmpty(bindName))
@@ -137,10 +137,12 @@ namespace ZRQ.UI.UIUtils
         /// <summary>
         /// Finds a parent of a given item on the visual tree.
         /// </summary>
-        /// <typeparam name="T">The type of the queried item.</typeparam>
-        /// <param name="child">A direct or indirect child of the queried item.</param>
-        /// <returns>The first parent item that matches the submitted type parameter. 
-        /// If not matching item can be found, a null reference is being returned.</returns>
+        /// <typeparam name="T"> The type of the queried item. </typeparam>
+        /// <param name="child"> A direct or indirect child of the queried item. </param>
+        /// <returns>
+        /// The first parent item that matches the submitted type parameter. If not matching item
+        /// can be found, a null reference is being returned.
+        /// </returns>
         public static T FindVisualParent<T>(DependencyObject child)
           where T : DependencyObject
         {
@@ -162,7 +164,8 @@ namespace ZRQ.UI.UIUtils
                 return FindVisualParent<T>(parentObject);
             }
         }
-        /// <summary>
+
+        /// <summary> 
         /// 其实这玩意 就是类型于 tatic T FindChild<T>(DependencyObject parent, string childName)
         /// </summary>
         internal static DependencyObject FindChild(this DependencyObject reference, string childName, Type childType)
@@ -202,6 +205,7 @@ namespace ZRQ.UI.UIUtils
             }
             return foundChild;
         }
+
         private static void FindValidationChilds<T>(DependencyObject parent, ref List<T> dependencyObjects) where T : DependencyObject
         {
             int childrenCount = VisualTreeHelper.GetChildrenCount(parent);

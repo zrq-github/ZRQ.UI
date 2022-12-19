@@ -11,7 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\CloseCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UICommands\RelayCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConvt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\EnumDescriptionConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />

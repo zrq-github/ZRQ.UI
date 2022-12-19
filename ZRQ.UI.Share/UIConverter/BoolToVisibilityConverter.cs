@@ -10,10 +10,16 @@ using System.Windows.Media;
 namespace ZRQ.UI.UIConverter
 {
     /// <summary>
-    /// 将Color的颜色转换成指定字符串
+    /// bool -> Visibility
     /// </summary>
-    public class BoolVisibilityConvt : System.Windows.Data.IValueConverter
+    /// <remarks>
+    /// false -> Visibility.Hidden
+    /// true -> Visibility.Visible
+    /// </remarks>
+    public class BoolToVisibilityConverter : System.Windows.Data.IValueConverter
     {
+        public static readonly BoolToVisibilityConverter Instance = new();
+
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is bool)

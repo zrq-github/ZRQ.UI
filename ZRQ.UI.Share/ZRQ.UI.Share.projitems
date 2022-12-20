@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIModel\ViewModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TextBoxHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TreeViewUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\UIFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\ValidationUtils.cs" />
@@ -46,6 +47,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)UIStyles\ImageStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UIStyles\TextBox\ClearButtonTextBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

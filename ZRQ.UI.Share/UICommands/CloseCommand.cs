@@ -6,7 +6,7 @@ namespace ZRQ.UI.UICommands
 {
     public class CloseCommand : ICommand
     {
-        public bool? CanExecute(object parameter)
+        public bool CanExecute(object parameter)
         {
             return true;
         }

@@ -20,9 +20,42 @@ namespace ZRQ.WPF.TreeViewSample
     /// </summary>
     public partial class TreeWindows : Window
     {
+        private TreeViewModel _treeViewModel;
+
         public TreeWindows()
         {
             InitializeComponent();
+
+            _treeViewModel = (TreeViewModel)this.DataContext;
+        }
+
+        private void btn_Sort(object sender, RoutedEventArgs e)
+        {
+            //this.treeView.Items.IsLiveSorting = true;
+            //this.treeView.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription(nameof(TreeNode.ID), System.ComponentModel.ListSortDirection.Descending));
+            _treeViewModel.Sort();
+        }
+
+        private void btn_Init(object sender, RoutedEventArgs e)
+        {
+            // 顶层级节点
+            TreeNode node1 = new() { ID = "1", ParentID = "0" };
+            TreeNode node2 = new() { ID = "2", ParentID = "0" };
+
+            _treeViewModel.TreeNodeSource.Add(node1);
+            _treeViewModel.TreeNodeSource.Add(node2);
+
+            // 二层节点
+            node1.Childrens.Add(new() { ID = "14", ParentID = "1" });
+            node1.Childrens.Add(new() { ID = "15", ParentID = "1" });
+            node1.Childrens.Add(new() { ID = "11", ParentID = "1" });
+            node1.Childrens.Add(new() { ID = "12", ParentID = "1" });
+            node1.Childrens.Add(new() { ID = "13", ParentID = "1" });
+        }
+
+        private void btn_ClearSort(object sender, RoutedEventArgs e)
+        {
+            this.treeView.Items.SortDescriptions.Clear();
         }
     }
 
@@ -33,17 +66,6 @@ namespace ZRQ.WPF.TreeViewSample
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            //CodingNodeModel nodeModel = item as CodingNodeModel;
-            //if (null == nodeModel)
-            //{
-            //    return base.SelectTemplate(item, container);
-            //}
-
-            //if (nodeModel.CodingNoteType == DB.CodingNoteType.Category)
-            //{
-            //    return NodeCategoryTemplate;
-            //}
-
             return NodeCommondTemplate;
         }
     }

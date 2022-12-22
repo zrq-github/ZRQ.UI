@@ -4,15 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZRQ.WPF.TreeViewSample"
-        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         Title="TreeView"
-        Height="450"
-        Width="800">
+        Height="400"
+        Width="300">
     <Window.DataContext>
         <local:TreeViewModel></local:TreeViewModel>
     </Window.DataContext>
-    <Window.Resources>
+    <!--<Window.Resources>
         <local:TreeNodeDataTemplateSelector x:Key="TreeNodeDataTemplateSelector">
             <local:TreeNodeDataTemplateSelector.NodeCommondTemplate>
                 <HierarchicalDataTemplate DataType="{x:Type local:TreeNode}"
@@ -58,8 +57,61 @@
                 </HierarchicalDataTemplate>
             </local:TreeNodeDataTemplateSelector.NodeCategoryTemplate>
         </local:TreeNodeDataTemplateSelector>
-    </Window.Resources>
-    <Grid>
+    </Window.Resources>-->
+
+    <Grid
+        Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!-- 控制区域 -->
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.Row="0">
+            
+            <Button
+                Margin="5"
+                Content="初始化树"
+                Click="btn_Init"></Button>
+
+            <Button
+                Margin="5"
+                Content="排序"
+                Click="btn_Sort"></Button>
+
+            <Button
+                Margin="5"
+                Content="清空排序"
+                Click="btn_ClearSort"></Button>
+            
+        </StackPanel>
+
+        <TreeView
+            x:Name="treeView"
+            Grid.Row="1"
+            ItemsSource="{Binding TreeNodeSource}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate
+                    ItemsSource="{Binding Childrens}">
+                    <TextBlock
+                        Text="{Binding ID}"></TextBlock>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+            <TreeView.ItemContainerStyle>
+                <Style
+                    TargetType="TreeViewItem">
+                    <Setter
+                        Property="IsExpanded"
+                        Value="True" />
+                    <Setter
+                        Property="Visibility"
+                        Value="{Binding Visibility}"></Setter>
+                </Style>
+            </TreeView.ItemContainerStyle>
+        </TreeView>
 
     </Grid>
+
 </Window>

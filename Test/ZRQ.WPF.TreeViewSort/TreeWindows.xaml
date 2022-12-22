@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ZRQ.WPF.TreeViewSort"
         mc:Ignorable="d"
         Title="TreeView"
+        x:Name="win"
         Height="400"
         Width="300">
     <Window.DataContext>
@@ -63,6 +64,7 @@
         Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         
@@ -88,9 +90,22 @@
             
         </StackPanel>
 
+        <Grid
+            Grid.Row="1">
+
+            <TextBox
+                Text="{Binding SearchText}"
+                Height="30"
+                Margin="5"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                d:Text="SearchText"></TextBox>
+            
+        </Grid>
+
         <TreeView
             x:Name="treeView"
-            Grid.Row="1"
+            Grid.Row="2"
             ItemsSource="{Binding TreeNodeSource}">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate
@@ -103,12 +118,28 @@
                 <Style
                     TargetType="TreeViewItem">
                     <Setter
-                        Property="IsExpanded"
-                        Value="True" />
+                        Property="IsExpanded">
+                        <Setter.Value>
+                            <MultiBinding
+                                Converter="{x:Static local:MultiBindingConverter.Instance}">
+                                <Binding
+                                    Path="IsExpanded"></Binding>
+                                <!--<Binding
+                                    Path="IsSearching"
+                                    ElementName="win"></Binding>-->
+                                <Binding
+                                    RelativeSource="{RelativeSource Mode=FindAncestor,AncestorType={x:Type TreeView}}"
+                                    Path="DataContext.IsSearching">
+                                </Binding>
+                            </MultiBinding>
+                        </Setter.Value>
+                    </Setter>
                     <Setter
                         Property="Visibility"
                         Value="{Binding Visibility}"></Setter>
                 </Style>
+
+                <!--"{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TreeView}}, Path=DataContext.SearchText}"-->
             </TreeView.ItemContainerStyle>
         </TreeView>
 

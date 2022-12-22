@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.TreeViewSort
 {
-    public class TreeNode
+    public class TreeNode : ViewModelBase
     {
         private ObservableCollection<TreeNode> childrens = new();
+        private bool _isExpanded = true;
 
         public TreeNode()
         {
@@ -20,6 +22,12 @@ namespace ZRQ.WPF.TreeViewSort
         public string ParentID { get; set; }
 
         public ObservableCollection<TreeNode> Childrens { get => childrens; set => childrens = value; }
+
+        public bool IsExpanded
+        {
+            get => _isExpanded;
+            set => SetProperty(ref _isExpanded, value);
+        }
     }
 
     public static class TreeNodeExtension

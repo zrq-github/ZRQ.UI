@@ -4,11 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.TreeViewSort
 {
-    public class TreeViewModel
+    public class TreeViewModel : ViewModelBase
     {
+        private string _searchText;
+
         public TreeViewModel()
         {
 
@@ -20,6 +23,16 @@ namespace ZRQ.WPF.TreeViewSort
         {
             Sort(TreeNodeSource);
         }
+
+        /// <summary>
+        /// 搜索Text
+        /// </summary>
+        public string SearchText { get => _searchText; set => SetProperty(ref _searchText, value); }
+
+        /// <summary>
+        /// 是否在搜索状态
+        /// </summary>
+        public bool IsSearching { get => string.IsNullOrEmpty(_searchText); }
 
         void Sort(IEnumerable<TreeNode> treeNodes)
         {

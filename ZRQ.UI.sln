@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TestHook", "Test\ZR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGGroupSortFilterExample", "Test\DGGroupSortFilterExample\DGGroupSortFilterExample.csproj", "{D2B71007-2F32-46FF-B434-C9D6A9135CC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TreeViewSample", "Test\ZRQ.WPF.TreeViewSample\ZRQ.WPF.TreeViewSample.csproj", "{E79FE34F-3DE8-4B7C-80C0-C30663360EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TreeViewSort", "Test\ZRQ.WPF.TreeViewSample\ZRQ.WPF.TreeViewSort.csproj", "{E79FE34F-3DE8-4B7C-80C0-C30663360EE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,7 +19,12 @@ namespace ZRQ.WPF.TreeViewSort
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            List<object> list = new();
+
+            list.Add(value);
+            list.Add(value);
+
+            return list.ToArray();
         }
     }
 }

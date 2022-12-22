@@ -106,7 +106,8 @@
         <TreeView
             x:Name="treeView"
             Grid.Row="2"
-            ItemsSource="{Binding TreeNodeSource}">
+            ItemsSource="{Binding TreeNodeSource}"
+            PreviewMouseDoubleClick="treeView_PreviewMouseDoubleClick">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate
                     ItemsSource="{Binding Childrens}">
@@ -121,12 +122,13 @@
                         Property="IsExpanded">
                         <Setter.Value>
                             <MultiBinding
+                                Mode="TwoWay"
                                 Converter="{x:Static local:MultiBindingConverter.Instance}">
                                 <Binding
                                     Path="IsExpanded"></Binding>
-                                <!--<Binding
+                                <Binding
                                     Path="IsSearching"
-                                    ElementName="win"></Binding>-->
+                                    ElementName="win"></Binding>
                                 <Binding
                                     RelativeSource="{RelativeSource Mode=FindAncestor,AncestorType={x:Type TreeView}}"
                                     Path="DataContext.IsSearching">

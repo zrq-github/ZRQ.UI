@@ -45,6 +45,11 @@ public partial class TreeWindows : Window
     {
         this.treeView.Items.SortDescriptions.Clear();
     }
+
+    private void treeView_PreviewMouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        e.Handled= true;
+    }
 }
 
 public class TreeNodeDataTemplateSelector : DataTemplateSelector

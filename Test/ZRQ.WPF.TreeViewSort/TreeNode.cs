@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace ZRQ.WPF.TreeViewSample
+namespace ZRQ.WPF.TreeViewSort
 {
     public class TreeNode
     {

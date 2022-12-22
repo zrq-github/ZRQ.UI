@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ZRQ.WPF.TreeViewSort
+namespace ZRQ.WPF.DataGridSort
 {
     /// <summary>
     /// Interaction logic for App.xaml

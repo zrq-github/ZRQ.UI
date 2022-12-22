@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZRQ.WPF.TreeViewSample
+namespace ZRQ.WPF.TreeViewSort
 {
     public class TreeViewModel
     {

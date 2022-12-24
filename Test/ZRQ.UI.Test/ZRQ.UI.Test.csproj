@@ -27,6 +27,4 @@
     <Folder Include="_Test\" />
   </ItemGroup>
 
-  <Import Project="..\..\ZRQ.UI.Share\ZRQ.UI.Share.projitems" Label="Shared" />
-
 </Project>

@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGGroupSortFilterExample", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TreeViewSort", "Test\ZRQ.WPF.TreeViewSort\ZRQ.WPF.TreeViewSort.csproj", "{62AE9A64-326A-4AF6-8A92-E7BE479B00A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.WPF.DataGridSort", "Test\ZRQ.WPF.DataGridSort\ZRQ.WPF.DataGridSort.csproj", "{D5375ADD-7CDA-40A8-8822-1DED218654DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.DataGridSort", "Test\ZRQ.WPF.DataGridSort\ZRQ.WPF.DataGridSort.csproj", "{D5375ADD-7CDA-40A8-8822-1DED218654DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +43,8 @@ Global
 		{7736BDB8-9259-453B-A756-886DE7025ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7736BDB8-9259-453B-A756-886DE7025ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7736BDB8-9259-453B-A756-886DE7025ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAC908E-1781-40FE-B7E5-2A869E4C322C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAC908E-1781-40FE-B7E5-2A869E4C322C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDA7264-9713-4547-A9EF-27F05E30D02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -94,7 +96,6 @@ Global
 		SolutionGuid = {CE0989A1-3B0F-4575-AC91-F95915006434}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		ZRQ.UI.Share\ZRQ.UI.Share.projitems*{a302e63f-87f3-4a52-a511-9530dec039c0}*SharedItemsImports = 5
 		ZRQ.UI.Share\ZRQ.UI.Share.projitems*{dbac908e-1781-40fe-b7e5-2a869e4c322c}*SharedItemsImports = 13
 		ZRQ.UI.Share\ZRQ.UI.Share.projitems*{edda7264-9713-4547-a9ef-27f05e30d02b}*SharedItemsImports = 5
 	EndGlobalSection

@@ -23,6 +23,14 @@ namespace ZRQ.WPF.DataGridSort
         public MainWindow()
         {
             InitializeComponent();
+
+            List<DataGridModel> dataGridModels = new();
+
+            dataGridModels.Add(new DataGridModel() { Id = 1, Name = "1" });
+            dataGridModels.Add(new DataGridModel() { Id = 2, Name = "2" });
+            dataGridModels.Add(new DataGridModel() { Id = 3, Name = "3" });
+
+            this.dataGrid.ItemsSource = dataGridModels;
         }
 
         private void btn_Init(object sender, RoutedEventArgs e)

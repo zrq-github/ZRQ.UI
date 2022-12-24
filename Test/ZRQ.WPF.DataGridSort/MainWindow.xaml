@@ -26,8 +26,19 @@
             
         </StackPanel>
 
-        <DataGrid>
-            
+        <DataGrid
+            Grid.Row="1"
+            x:Name="dataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="列1"
+                    Binding="{Binding Id}"
+                    Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="列2"
+                    Binding="{Binding Name}"
+                    Width="1*"></DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
         
     </Grid>

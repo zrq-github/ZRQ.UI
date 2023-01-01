@@ -16,14 +16,24 @@ using System.Windows.Shapes;
 namespace ZRQ.WPF.DataGridSort
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
 
+            this.Loaded += Page1_Loaded;
+        }
+
+        private void Page1_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
             List<DataGridModel> dataGridModels = new();
 
             dataGridModels.Add(new DataGridModel() { Id = 1, Name = "1" });
@@ -36,23 +46,7 @@ namespace ZRQ.WPF.DataGridSort
             viewSource.GroupDescriptions.Add(new PropertyGroupDescription(nameof(DataGridModel.Name)));
             viewSource.View.Refresh();
 
-            //this.dataGrid.ItemsSource = viewSource.View;
-        }
-
-        private void btn_Init(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Page(object sender, RoutedEventArgs e)
-        {
-            Window1 window1 = new();
-            window1.Show();
-        }
-
-        private void Expander_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
+            this.dataGrid.ItemsSource = viewSource.View;
         }
     }
 }

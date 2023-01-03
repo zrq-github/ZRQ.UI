@@ -11,6 +11,7 @@ namespace ZRQ.WPF.TreeViewSort
     public class TreeViewModel : ViewModelBase
     {
         private string _searchText;
+        private object selectedValue;
 
         public TreeViewModel()
         {
@@ -18,6 +19,18 @@ namespace ZRQ.WPF.TreeViewSort
         }
 
         public ObservableCollection<TreeNode> TreeNodeSource { get; set; } = new();
+
+        public object SelectedValue
+        {
+            get
+            {
+                return selectedValue;
+            }
+            set
+            {
+                selectedValue = value;
+            }
+        }
 
         public void Sort()
         {

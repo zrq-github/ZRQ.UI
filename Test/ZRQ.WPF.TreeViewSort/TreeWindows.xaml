@@ -107,7 +107,16 @@
             x:Name="treeView"
             Grid.Row="2"
             ItemsSource="{Binding TreeNodeSource}"
+            SelectedItemChanged="treeView_SelectedItemChanged"
             PreviewMouseDoubleClick="treeView_PreviewMouseDoubleClick">
+
+            <TreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="排序"
+                              Click="MenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </TreeView.ContextMenu>
+            
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate
                     ItemsSource="{Binding Childrens}">

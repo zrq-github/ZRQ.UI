@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.TreeViewSort
 {
-    public class TreeNode : ViewModelBase
+    public class TreeNode : ViewModelBase,IEqualityComparer<TreeNode>
     {
         private ObservableCollection<TreeNode> childrens = new();
         private bool _isExpanded = true;
@@ -28,6 +30,29 @@ namespace ZRQ.WPF.TreeViewSort
             get => _isExpanded;
             set => SetProperty(ref _isExpanded, value);
         }
+
+        public bool Equals(TreeNode x, TreeNode y)
+        {
+            return x.ID.Equals(y.ID);
+        }
+
+        public int GetHashCode([DisallowNull] TreeNode obj)
+        {
+            return HashCode.Combine(ID);
+        }
+
+        //public override bool Equals(object obj)
+        //{
+        //    TreeNode treeNode = obj as TreeNode;
+        //    if (null == treeNode) return false;
+
+        //    return ID.Equals(((TreeNode)obj).ID);
+        //}
+
+        //public override int GetHashCode()
+        //{
+        //    return HashCode.Combine( ID);
+        //}
     }
 
     public static class TreeNodeExtension

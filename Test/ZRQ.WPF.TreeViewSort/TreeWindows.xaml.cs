@@ -50,6 +50,24 @@ public partial class TreeWindows : Window
     {
         e.Handled= true;
     }
+
+    private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+    {
+        var oldValue = e.OldValue;
+        var newValue = e.NewValue;
+        var source = e.Source;
+        var a = e.RoutedEvent;
+    }
+
+    private void 排序_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+
+    }
+
+    private void MenuItem_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
 }
 
 public class TreeNodeDataTemplateSelector : DataTemplateSelector

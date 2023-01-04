@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZRQ.WPF.DataGridSample.GroupSample;
+using ZRQ.WPF.DataGridSample.Views;
 
 namespace ZRQ.WPF.DataGridSample
 {
@@ -41,6 +42,13 @@ namespace ZRQ.WPF.DataGridSample
             DataGroupWindow dataGroupWindow = new DataGroupWindow();
             dataGroupWindow.Owner = this;
             dataGroupWindow.ShowDialog();
+        }
+
+        private void btn_dynamicCell_Click(object sender, RoutedEventArgs e)
+        {
+            DynamicDataGrid dynamicDataGrid = new();
+            dynamicDataGrid.Owner = this;
+            dynamicDataGrid.ShowDialog();
         }
     }
 }

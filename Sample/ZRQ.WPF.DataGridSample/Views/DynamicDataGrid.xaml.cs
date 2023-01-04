@@ -12,16 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ZRQ.WPF.DataGridSort
+namespace ZRQ.WPF.DataGridSample.Views
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for DynamicDataGrid.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class DynamicDataGrid : Window
     {
-        public Window1()
+        public static DynamicDataGrid dynamicDataGrid { get; set; }
+
+        public DynamicDataGrid()
         {
             InitializeComponent();
+
+            dynamicDataGrid = this;
         }
     }
 }

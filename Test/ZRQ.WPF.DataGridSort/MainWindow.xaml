@@ -132,14 +132,7 @@
             Grid.Row="0">
 
             <Button
-                Content="初始化数据"
-                Click="btn_Init"></Button>
-
-            <Button
-                Content="弹起 Page"
-                Margin="5,0,0,0"
-                Click="btn_Page"></Button>
-
+                Content="初始化数据"></Button>
         </StackPanel>
 
         <DataGrid

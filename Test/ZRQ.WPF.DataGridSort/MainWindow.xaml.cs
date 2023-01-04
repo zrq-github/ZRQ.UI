@@ -38,21 +38,5 @@ namespace ZRQ.WPF.DataGridSort
 
             //this.dataGrid.ItemsSource = viewSource.View;
         }
-
-        private void btn_Init(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Page(object sender, RoutedEventArgs e)
-        {
-            Window1 window1 = new();
-            window1.Show();
-        }
-
-        private void Expander_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }

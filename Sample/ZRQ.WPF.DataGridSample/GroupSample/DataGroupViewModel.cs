@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-using ZRQ.WPF.DataGridSample.Model;
+using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.DataGridSample.GroupSample
 {

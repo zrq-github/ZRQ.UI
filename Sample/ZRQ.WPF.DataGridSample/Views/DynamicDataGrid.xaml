@@ -1,0 +1,86 @@
+﻿<Window
+    x:Class="ZRQ.WPF.DataGridSample.Views.DynamicDataGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:ZRQ.WPF.DataGridSample.Views"
+    xmlns:viewModel="clr-namespace:ZRQ.WPF.DataGridSample.ViewModels"
+    mc:Ignorable="d"
+    Title="DynamicDataGrid"
+    Height="450"
+    Width="800">
+    <Window.DataContext>
+        <viewModel:DynamicDataGridViewModel></viewModel:DynamicDataGridViewModel>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Orientation="Horizontal"
+            Height="auto">
+
+            <Button
+                Margin="10"
+                Content="动态生成列"
+                Command="{Binding CreateDynamicCol}">
+            </Button>
+
+            <Button
+                Margin="10"
+                Content="动态创建数据"
+                Command="{Binding CreateItemsSource}">
+            </Button>
+
+            <Button
+                Margin="10"
+                Content="清空绑定的数据"
+                Command="{Binding ClearItemsSource}">
+            </Button>
+
+            <Button
+                Margin="10"
+                Content="绑定列数据"
+                Command="{Binding BindingColData}">
+            </Button>
+
+            <Button
+                Margin="10"
+                Content="添加数据-添加板顶"
+                Command="{Binding Addad}">
+            </Button>
+
+        </StackPanel>
+        
+        <DataGrid
+            x:Name="dg_Table"
+            Grid.Row="1"
+            IsTextSearchEnabled="False"
+            AutoGenerateColumns="False"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto"
+            HorizontalGridLinesBrush="#CCCCCC"
+            VerticalGridLinesBrush="#CCCCCC"
+            ItemsSource="{Binding DataGridItems}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding [0]}"
+                    Foreground="Black"
+                    Width="60"
+                    Header="Test"
+                    IsReadOnly="false" />
+            </DataGrid.Columns>
+
+            <i:Interaction.Behaviors>
+                <local:ColumnsBindingBehaviour
+                    Columns="{Binding DataGridColumns,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+            </i:Interaction.Behaviors>
+        </DataGrid>
+    </Grid>
+</Window>

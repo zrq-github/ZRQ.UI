@@ -50,7 +50,7 @@ namespace ZRQ.UI.UIModel
                 _validationErrors.Remove(propertyName);
         }
 
-        public IEnumerable GetErrors(string propertyName)
+        public IEnumerable? GetErrors(string propertyName)
         {
             if (string.IsNullOrEmpty(propertyName))
                 return _validationErrors.SelectMany(kvp => kvp.Value);
@@ -58,7 +58,12 @@ namespace ZRQ.UI.UIModel
             return _validationErrors.TryGetValue(propertyName, out var errors) ? errors : Enumerable.Empty<object>();
         }
 
-        protected void RaisePropertyChanged(string propertyName)
+        public virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            RaisePropertyChanged(propertyName);
+        }
+
+        protected void RaisePropertyChanged(string? propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

@@ -33,22 +33,48 @@ namespace ZRQ.WPF.DataGridSample.ViewModels
 
         public ObservableCollection<ObservableCollection<string>> DataGridItems { get => _dataGridItems; set => SetProperty(ref _dataGridItems, value); }
 
+
         private void PerformAddad()
         {
-            Task task = Task.Run(() =>
+            DataGridItems.Clear();
+            for (int i = 0; i < 20; i++)
             {
-                DynamicDataGrid.dynamicDataGrid.Dispatcher.BeginInvoke(() =>
+                ObservableCollection<string> items = new();
+
+                for (int j = 0; j < 100; j++)
                 {
-                    PerformCreateDynamicCol();
-                    Thread.Sleep(1000);
-                    PerformCreateItemsSource();
-                });
-            }).ContinueWith(t =>
+                    items.Add($"{i}_{j}");
+                }
+                DataGridItems.Add(items);
+            }
+
+            DataGridColumns.Clear();
+
+            for (int i = 0; i < 20; i++)
             {
-                DynamicDataGrid.dynamicDataGrid.Dispatcher.BeginInvoke(() =>
+                var col = GridColumnCreate.CreateTextColum();
+                col.Header = $"列{i}";
+
+                DataGridColumns.Add(col);
+            }
+
+            for (int i = 0; i < DataGridColumns.Count; i++)
+            {
+                var column = DataGridColumns[i];
+
+                DataGridTextColumn textColumn = (DataGridTextColumn)column;
+                System.Windows.Data.Binding binding = new($"[{i}]")
                 {
-                });
-            });
+                    UpdateSourceTrigger = System.Windows.Data.UpdateSourceTrigger.PropertyChanged
+                };
+                textColumn.Binding = binding;
+            }
+
+            //PerformCreateItemsSource();
+
+
+            //PerformCreateDynamicCol();
+            //PerformBindingColData();
         }
 
         /// <summary>
@@ -106,6 +132,10 @@ namespace ZRQ.WPF.DataGridSample.ViewModels
                 }
                 DataGridItems.Add(items);
             }
+
+            //DynamicDataGrid.dynamicDataGrid.dg_Table.ItemsSource = new ObservableCollection<ObservableCollection<string>>();
+
+            //DynamicDataGrid.dynamicDataGrid.dg_Table.ItemsSource = DataGridItems;
         }
     }
 

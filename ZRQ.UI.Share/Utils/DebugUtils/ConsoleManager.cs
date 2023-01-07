@@ -72,13 +72,13 @@ namespace ZRQ.UI.Utils.DebugUtils
         {
             Type type = typeof(Console);
 
-            System.Reflection.FieldInfo _out = type.GetField("_out",
+            System.Reflection.FieldInfo? _out = type.GetField("_out",
                 System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
 
-            System.Reflection.FieldInfo _error = type.GetField("_error",
+            System.Reflection.FieldInfo? _error = type.GetField("_error",
                 System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
 
-            System.Reflection.MethodInfo _InitializeStdOutError = type.GetMethod("InitializeStdOutError",
+            System.Reflection.MethodInfo? _InitializeStdOutError = type.GetMethod("InitializeStdOutError",
                 System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
 
             Debug.Assert(_out != null);

@@ -16,7 +16,12 @@ namespace ZRQ.UI.UIConverter
         {
             if (value is int || value is double)
             {
-                int intParameter = int.Parse(parameter.ToString());
+                bool isTryParse = int.TryParse(parameter.ToString(), out int intParameter);
+                if (!isTryParse)
+                {
+                    throw new ArgumentException();
+                }
+
                 double itemWith = (double)value / intParameter - 2; //减2是因为直接除的话,还是换行
                 if (itemWith < 0)
                 {

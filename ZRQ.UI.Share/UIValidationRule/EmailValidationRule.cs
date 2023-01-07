@@ -14,18 +14,18 @@ namespace ZRQ.UI.UIValidationRule
     /// </summary>
     public class EmailValidationRule : ValidationRule
     {
-        public override ValidationResult Validate(object value, CultureInfo cultureInfo)
+        public override ValidationResult Validate(object? value, CultureInfo cultureInfo)
         {
-            Regex emailRegex = new Regex("^\\s*([A-Za-z0-9_-]+(\\.\\w+)*@(\\w+\\.)+\\w{2,5})\\s*$");
-            string str = (value ?? "").ToString();
+            Regex emailRegex = new(pattern: "^\\s*([A-Za-z0-9_-]+(\\.\\w+)*@(\\w+\\.)+\\w{2,5})\\s*$");
+            string? str = (value ?? "").ToString();
             if (!string.IsNullOrWhiteSpace(str))
             {
                 if (!emailRegex.IsMatch(str))
                 {
-                    return new ValidationResult(false, "邮箱地址错误！");
+                    return new ValidationResult(isValid: false, errorContent: "邮箱地址错误！");
                 }
             }
-            return new ValidationResult(true, null);
+            return new ValidationResult(isValid: true, errorContent: null);
         }
     }
 }

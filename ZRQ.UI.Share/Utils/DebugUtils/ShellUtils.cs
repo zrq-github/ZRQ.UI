@@ -13,18 +13,18 @@ namespace ZRQ.UI.Utils.DebugUtils
     /// </summary>  
     public class ShellUtils : IDisposable
     {
-        private static ShellUtils instance;
+        private static ShellUtils? _instance;
 
         public static ShellUtils Inst
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
                     ConsoleManager.Show();
-                    instance = new ShellUtils();
+                    _instance = new ShellUtils();
                 }
-                return instance;
+                return _instance;
             }
         }
         public static void Error(string error)
@@ -47,7 +47,7 @@ namespace ZRQ.UI.Utils.DebugUtils
             ConsoleManager.Hide();
         }
 
-        public void Error(string error, Exception ex = null)
+        public void Error(string error, Exception? ex = null)
         {
             if (null == ex)
             {
@@ -66,7 +66,7 @@ namespace ZRQ.UI.Utils.DebugUtils
             ShellUtils.WriteLine(ref output);
         }
 
-        public void Warning(string warning, Exception ex = null)
+        public void Warning(string warning, Exception? ex = null)
         {
             if (null == ex)
             {

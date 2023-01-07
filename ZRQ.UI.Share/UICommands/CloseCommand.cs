@@ -6,7 +6,7 @@ namespace ZRQ.UI.UICommands
 {
     public class CloseCommand : ICommand
     {
-        public bool CanExecute(object parameter)
+        public bool CanExecute(object? parameter)
         {
             return true;
         }
@@ -17,7 +17,7 @@ namespace ZRQ.UI.UICommands
             remove => CommandManager.RequerySuggested -= value;
         }
 
-        public void Execute(object parameter)
+        public void Execute(object? parameter)
         {
             if (parameter is Window myWin) myWin.Close();
         }

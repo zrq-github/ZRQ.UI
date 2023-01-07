@@ -43,7 +43,7 @@ namespace ZRQ.UI.UIValidationRule
         /// <remarks>
         /// 目前来说只支持 int double
         /// </remarks>
-        public Type ValidationType { get; set; }
+        public Type? ValidationType { get; set; }
 
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

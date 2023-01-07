@@ -100,7 +100,7 @@ namespace ZRQ.UI.Controls
         private static void OnHighlightBackgroundChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var control = sender as HighlightTextBlock;
-            control.SetHighlight();
+            control?.SetHighlight();
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace ZRQ.UI.Controls
         private static void OnHighlightForegroundChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var control = sender as HighlightTextBlock;
-            control.SetHighlight();
+            control?.SetHighlight();
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace ZRQ.UI.Controls
         private static void OnHighlightWordChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var control = sender as HighlightTextBlock;
-            control.SetHighlight();
+            control?.SetHighlight();
         }
 
         /// <summary>

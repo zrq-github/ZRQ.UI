@@ -42,6 +42,7 @@ namespace ZRQ.UI.UIModel
                 _validationErrors.Add(propertyName, new List<string>());
 
             _validationErrors[propertyName].Add(errorMessage);
+            ErrorsChanged?.Invoke(this, new(propertyName));
         }
 
         public void ClearValidationErrors(string propertyName)
@@ -50,7 +51,7 @@ namespace ZRQ.UI.UIModel
                 _validationErrors.Remove(propertyName);
         }
 
-        public IEnumerable? GetErrors(string propertyName)
+        public IEnumerable GetErrors(string? propertyName)
         {
             if (string.IsNullOrEmpty(propertyName))
                 return _validationErrors.SelectMany(kvp => kvp.Value);

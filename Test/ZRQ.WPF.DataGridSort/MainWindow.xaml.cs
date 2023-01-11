@@ -24,15 +24,17 @@ namespace ZRQ.WPF.DataGridSort
         {
             InitializeComponent();
 
-            List<DataGridModel> dataGridModels = new();
+            List<DataGridModel> dataGridModels = new()
+            {
+                new DataGridModel() { Id = 1, Name = "1" },
+                new DataGridModel() { Id = 2, Name = "2" },
+                new DataGridModel() { Id = 3, Name = "3" }
+            };
 
-            dataGridModels.Add(new DataGridModel() { Id = 1, Name = "1" });
-            dataGridModels.Add(new DataGridModel() { Id = 2, Name = "2" });
-            dataGridModels.Add(new DataGridModel() { Id = 3, Name = "3" });
-
-
-            CollectionViewSource viewSource = new();
-            viewSource.Source = dataGridModels;
+            CollectionViewSource viewSource = new()
+            {
+                Source = dataGridModels
+            };
             viewSource.GroupDescriptions.Add(new PropertyGroupDescription(nameof(DataGridModel.Name)));
             viewSource.View.Refresh();
 

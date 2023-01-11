@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TestHook", "Test\ZR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.WPF.TreeViewSort", "Test\ZRQ.WPF.TreeViewSort\ZRQ.WPF.TreeViewSort.csproj", "{04B9B2FB-44F0-4653-B1E5-0114E34CB702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRQ.TestCombox", "Test\ZRQ.TestCombox\ZRQ.TestCombox.csproj", "{E037F151-3CD7-43D6-8EDE-079A47517780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZRQ.TestCombobox", "Test\ZRQ.TestCombox\ZRQ.TestCombobox.csproj", "{E037F151-3CD7-43D6-8EDE-079A47517780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

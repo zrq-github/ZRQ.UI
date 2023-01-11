@@ -15,8 +15,8 @@ namespace ZRQ.WPF.DataGridSample.ViewModels
 {
     public class DynamicDataGridViewModel : ViewModelBase
     {
-        private System.Collections.ObjectModel.ObservableCollection<System.Windows.Controls.DataGridColumn> _dataGridColumns = new();
-        private ObservableCollection<ObservableCollection<string>> _dataGridItems = new();
+        private ObservableCollection<DataGridColumn>? _dataGridColumns = new();
+        private ObservableCollection<ObservableCollection<string>>? _dataGridItems = new();
         private ActionCommand addad;
         private ActionCommand? bindingColData;
         private ActionCommand? clearItemsSource;
@@ -29,9 +29,9 @@ namespace ZRQ.WPF.DataGridSample.ViewModels
         public ICommand CreateDynamicCol => createDynamicCol ??= new ActionCommand(PerformCreateDynamicCol);
         public ICommand CreateItemsSource => createItemsSource ??= new ActionCommand(PerformCreateItemsSource);
 
-        public System.Collections.ObjectModel.ObservableCollection<System.Windows.Controls.DataGridColumn> DataGridColumns { get => _dataGridColumns; set => SetProperty(ref _dataGridColumns, value); }
+        public ObservableCollection<DataGridColumn>? DataGridColumns { get => _dataGridColumns; set => SetProperty(ref _dataGridColumns, value); }
 
-        public ObservableCollection<ObservableCollection<string>> DataGridItems { get => _dataGridItems; set => SetProperty(ref _dataGridItems, value); }
+        public ObservableCollection<ObservableCollection<string>>? DataGridItems { get => _dataGridItems; set => SetProperty(ref _dataGridItems, value); }
 
 
         private void PerformAddad()

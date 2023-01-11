@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 using ZRQ.UI.UIModel;
 
-namespace ZRQ.TestCombox
+namespace ZRQ.TestCombobox
 {
     internal class MainWindowsModel : ViewModelBase
     {
+        private IEnumerable? comboBoxItems;
 
-        private System.Collections.IEnumerable comboBoxItems;
+        public IEnumerable? ComboBoxItems { get => comboBoxItems; set => SetProperty(ref comboBoxItems, value); }
 
-        public System.Collections.IEnumerable ComboBoxItems { get => comboBoxItems; set => SetProperty(ref comboBoxItems, value); }
+        private object? displayStyle;
 
-        private object displayStyle;
-
-        public object DisplayStyle { get => displayStyle; set => SetProperty(ref displayStyle, value); }
-
+        public object? DisplayStyle { get => displayStyle; set => SetProperty(ref displayStyle, value); }
     }
 }

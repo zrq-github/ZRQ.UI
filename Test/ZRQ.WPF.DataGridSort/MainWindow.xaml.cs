@@ -31,12 +31,12 @@ namespace ZRQ.WPF.DataGridSort
                 new DataGridModel() { Id = 3, Name = "3" }
             };
 
-            CollectionViewSource viewSource = new()
+            CollectionViewSource collectionViewSource = new()
             {
                 Source = dataGridModels
             };
-            viewSource.GroupDescriptions.Add(new PropertyGroupDescription(nameof(DataGridModel.Name)));
-            viewSource.View.Refresh();
+            collectionViewSource.GroupDescriptions.Add(new PropertyGroupDescription(nameof(DataGridModel.Name)));
+            collectionViewSource.View.Refresh();
 
             //this.dataGrid.ItemsSource = viewSource.View;
         }

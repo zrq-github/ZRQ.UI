@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\BoolToVisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ColorSolidColorBrushConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\EnumDescriptionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIConverter\EnumDescriptionTypeConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIExtensions\EnumBindingSourceExtension.cs" />

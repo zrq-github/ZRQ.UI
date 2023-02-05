@@ -37,18 +37,28 @@ namespace ZRQ.WPF.DataGridSample
 
         }
 
-        private void btn_GroupSample_Click(object sender, RoutedEventArgs e)
+        private void BtnGroupSample_Click(object sender, RoutedEventArgs e)
         {
-            DataGroupWindow dataGroupWindow = new DataGroupWindow();
-            dataGroupWindow.Owner = this;
+            DataGroupWindow dataGroupWindow = new()
+            {
+                Owner = this
+            };
             dataGroupWindow.ShowDialog();
         }
 
-        private void btn_dynamicCell_Click(object sender, RoutedEventArgs e)
+        private void BtnBtnDynamicCell_Click(object sender, RoutedEventArgs e)
         {
-            DynamicDataGrid dynamicDataGrid = new();
-            dynamicDataGrid.Owner = this;
+            DynamicDataGrid dynamicDataGrid = new()
+            {
+                Owner = this
+            };
             dynamicDataGrid.ShowDialog();
+        }
+
+        private void BtnBigData_OnClick(object sender, RoutedEventArgs e)
+        {
+            BigDataGrid bigDataGrid = new();
+            bigDataGrid.ShowDialog();
         }
     }
 }

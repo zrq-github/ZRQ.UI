@@ -13,17 +13,23 @@
             Orientation="Vertical">
             
             <Button
-                x:Name="btn_GroupSample"
+                x:Name="btnGroupSample"
                 Content="分组测试"
                 Margin="10"
                 VerticalAlignment="Top"
-                Click="btn_GroupSample_Click" />
+                Click="BtnGroupSample_Click" />
 
             <Button
                 Margin="10"
-                x:Name="btn_dynamicCell"
+                x:Name="btnDynamicCell"
                 Content="动态列测试"
-                Click="btn_dynamicCell_Click"></Button>
+                Click="BtnBtnDynamicCell_Click"></Button>
+
+            <Button
+                Margin="10"
+                x:Name="btnBigData"
+                Content="大数据处理"
+                Click="BtnBigData_OnClick"></Button>
 
         </StackPanel>
     </Grid>

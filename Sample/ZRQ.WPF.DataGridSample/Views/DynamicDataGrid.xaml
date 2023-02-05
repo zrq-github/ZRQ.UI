@@ -58,7 +58,7 @@
         </StackPanel>
         
         <DataGrid
-            x:Name="dg_Table"
+            x:Name="dgTable"
             Grid.Row="1"
             IsTextSearchEnabled="False"
             AutoGenerateColumns="False"

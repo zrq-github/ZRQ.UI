@@ -10,72 +10,78 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
 {
     public class DataGroupViewModel : ViewModelBase
     {
-        public ObservableCollection<DataGroupModel> DataGroupModels { get; set; }
-        public bool IsDataGridGroupShow { get; set; }
+        public ObservableCollection<DataGroupModel> DataGroupModels { get; set; } = new();
+        public bool IsDataGridGroupShow { get; set; } = false;
 
         public DataGroupViewModel()
         {
-            DataGroupModels = new ObservableCollection<DataGroupModel>();
-            IsDataGridGroupShow = false;
-
             InitDataGourpModels(this.DataGroupModels);
         }
 
-        private void InitDataGourpModels(ObservableCollection<DataGroupModel> dataGroupModels)
+        private static void InitDataGourpModels(ObservableCollection<DataGroupModel>? dataGroupModels)
         {
-            if (null == dataGroupModels)
-            {
-                dataGroupModels = new ObservableCollection<DataGroupModel>();
-            }
+            dataGroupModels ??= new ObservableCollection<DataGroupModel>();
 
-            DataGroupModel dataGroupModel = new DataGroupModel();
+            DataGroupModel dataGroupModel;
 
-            string groupNameOne = $"group_1";
-            string groupNameTow = $"group_2";
-            string groupNameThree = $"group_3";
+            const string groupNameOne = $"group_1";
+            const string groupNameTow = $"group_2";
+            const string groupNameThree = $"group_3";
 
             // 分组1
             for (int i = 0; i < 100; i++)
             {
-                dataGroupModel = new DataGroupModel();
-                dataGroupModel.GroupName = groupNameOne;
-                dataGroupModel.Name = $"{groupNameOne}_张三{i}";
-                dataGroupModel.IsIgnore = true;
+                dataGroupModel = new DataGroupModel
+                {
+                    GroupName = groupNameOne,
+                    Name = $"{groupNameOne}_张三{i}",
+                    IsIgnore = true
+                };
                 dataGroupModels.Add(dataGroupModel);
 
-                dataGroupModel = new DataGroupModel();
-                dataGroupModel.GroupName = groupNameOne;
-                dataGroupModel.Name = $"{groupNameOne}_李四{i}";
-                dataGroupModel.IsIgnore = false;
+                dataGroupModel = new DataGroupModel
+                {
+                    GroupName = groupNameOne,
+                    Name = $"{groupNameOne}_李四{i}",
+                    IsIgnore = false
+                };
                 dataGroupModels.Add(dataGroupModel);
             }
 
             for (int i = 0; i < 100; i++)
             {
-                dataGroupModel = new DataGroupModel();
-                dataGroupModel.GroupName = groupNameTow;
-                dataGroupModel.Name = $"{groupNameTow}_王麻子{i}";
-                dataGroupModel.IsIgnore = true;
+                dataGroupModel = new DataGroupModel
+                {
+                    GroupName = groupNameTow,
+                    Name = $"{groupNameTow}_王麻子{i}",
+                    IsIgnore = true
+                };
                 dataGroupModels.Add(dataGroupModel);
             }
 
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameThree;
-            dataGroupModel.Name = "上官";
-            dataGroupModel.IsIgnore = true;
+            dataGroupModel = new DataGroupModel
+            {
+                GroupName = groupNameThree,
+                Name = "上官",
+                IsIgnore = true
+            };
             dataGroupModels.Add(dataGroupModel);
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameThree;
-            dataGroupModel.Name = "欧阳";
-            dataGroupModel.IsIgnore = false;
+            dataGroupModel = new DataGroupModel
+            {
+                GroupName = groupNameThree,
+                Name = "欧阳",
+                IsIgnore = false
+            };
             dataGroupModels.Add(dataGroupModel);
 
-            dataGroupModel = new DataGroupModel();
-            dataGroupModel.GroupName = groupNameThree;
-            dataGroupModel.Name = "欧耶";
-            dataGroupModel.IsIgnore = true;
+            dataGroupModel = new DataGroupModel
+            {
+                GroupName = groupNameThree,
+                Name = "欧耶",
+                IsIgnore = true
+            };
             dataGroupModels.Add(dataGroupModel);
         }
     }

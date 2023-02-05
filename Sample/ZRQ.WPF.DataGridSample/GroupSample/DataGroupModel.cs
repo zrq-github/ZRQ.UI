@@ -14,39 +14,26 @@ namespace ZRQ.WPF.DataGridSample.GroupSample;
 /// </summary>
 public class DataGroupModel : ViewModelBase
 {
-    private string groupName;
     private bool isIgnore;
-    private string name;
-    private string resultValue;
 
     public DataGroupModel()
     {
-        groupName = string.Empty;
-        name = string.Empty;
-        name = string.Empty;
-        resultValue = string.Empty;
+        GroupName = string.Empty;
+        Name = string.Empty;
+        Name = string.Empty;
+        ResultValue = string.Empty;
         isIgnore = false;
     }
 
     /// <summary>
     /// 设置文字颜色
     /// </summary>
-    internal Brush Foreground
-    {
-        get
-        {
-            if (!isIgnore)
-            {
-                return Brushes.Black;
-            }
-            else return Brushes.Gray;
-        }
-    }
+    internal Brush Foreground => !isIgnore ? Brushes.Black : Brushes.Gray;
 
     /// <summary>
     /// 分组逻辑记录
     /// </summary>
-    public string GroupName { get => groupName; set => groupName = value; }
+    public string GroupName { get; set; }
 
     /// <summary>
     /// 是否忽略
@@ -66,55 +53,15 @@ public class DataGroupModel : ViewModelBase
     /// <summary>
     /// 名字
     /// </summary>
-    public string Name { get => name; set => name = value; }
+    public string Name { get; set; }
 
     /// <summary>
     /// 结果值
     /// </summary>
-    public string ResultValue { get => resultValue; set => resultValue = value; }
-
-    /// <summary>
-    /// 检测的净高值
-    /// </summary>
-    public string CheckValue
-    {
-        get
-        {
-            return $"123/";
-        }
-        set
-        {
-
-        }
-    }
-
-    public string LimitValue
-    {
-        get
-        {
-            return $"456";
-        }
-        set
-        {
-
-        }
-    }
+    public string ResultValue { get; set; }
 
     /// <summary>
     /// 设置划线
     /// </summary>
-    public TextDecorationCollection TextDecoration
-    {
-        get
-        {
-            if (isIgnore)
-            {
-                return TextDecorations.Strikethrough;
-            }
-            else
-            {
-                return null;
-            }
-        }
-    }
+    public TextDecorationCollection? TextDecoration => isIgnore ? TextDecorations.Strikethrough : null;
 }

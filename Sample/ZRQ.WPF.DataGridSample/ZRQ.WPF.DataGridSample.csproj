@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ZRQ.UI\ZRQ.UI.csproj" />
+    <ProjectReference Include="..\ZRQ.UI.SampleData\ZRQ.UI.SampleData.csproj" />
   </ItemGroup>
 
   <ItemGroup>

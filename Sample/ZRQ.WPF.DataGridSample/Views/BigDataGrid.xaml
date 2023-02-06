@@ -48,7 +48,8 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn
                         Header="Id"
-                        Binding="{Binding Id,UpdateSourceTrigger=PropertyChanged}" />
+                        Binding="{Binding Id,UpdateSourceTrigger=PropertyChanged}" 
+                        />
                     <DataGridTextColumn
                         Header="姓名"
                         Binding="{Binding Name,UpdateSourceTrigger=PropertyChanged}" />
@@ -80,6 +81,26 @@
                         Header="Year"
                         IsReadOnly="True"
                         Binding="{Binding Year,UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+
+                    <DataGridHyperlinkColumn
+                        Header="超链接"
+                        Width="479"
+                        IsReadOnly="True"
+                        Binding="{Binding Path=Year}">
+                        <DataGridHyperlinkColumn.ElementStyle>
+                            <Style
+                                TargetType="TextBlock">
+                                <Setter
+                                    Property="VerticalAlignment"
+                                    Value="Center"></Setter>
+                                <EventSetter
+                                    Event="Hyperlink.Click"
+                                    HandledEventsToo="False"
+                                    Handler="OnHyperlinkClick"></EventSetter>
+                            </Style>
+                        </DataGridHyperlinkColumn.ElementStyle>
+                    </DataGridHyperlinkColumn>
+
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

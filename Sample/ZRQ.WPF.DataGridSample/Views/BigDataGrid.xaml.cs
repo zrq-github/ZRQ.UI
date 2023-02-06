@@ -23,5 +23,10 @@ namespace ZRQ.WPF.DataGridSample.Views
         {
             InitializeComponent();
         }
+
+        private void OnHyperlinkClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("超链接");
+        }
     }
 }

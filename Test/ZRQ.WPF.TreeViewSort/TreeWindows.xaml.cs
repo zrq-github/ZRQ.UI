@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace ZRQ.WPF.TreeViewSort;
 
@@ -48,7 +49,7 @@ public partial class TreeWindows : Window
 
     private void treeView_PreviewMouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        e.Handled= true;
+        e.Handled = true;
     }
 
     private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
@@ -67,6 +68,54 @@ public partial class TreeWindows : Window
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    private void TreeView_OnPreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        DependencyObject source = e.OriginalSource as DependencyObject;
+        while (source != null && source.GetType() != typeof(TreeViewItem))
+            source = System.Windows.Media.VisualTreeHelper.GetParent(source);
+        if (source != null)
+        {
+            TreeViewItem item = source as TreeViewItem;
+            CreateContextMenu(item.Header);
+        }
+    }
+
+    /// <summary>
+    /// 显示菜单
+    /// </summary>
+    /// <param name="positionItem"></param>
+    private void CreateContextMenu(object positionItem)
+    {
+        //ContextMenu contextMenu = new ContextMenu();
+        //MenuItem menuItem = new MenuItem();
+        //menuItem.Header = "刷新";
+        //menuItem.Click += (sender, e) => { MessageBox.Show("刷新"); };
+        //contextMenu.Items.Add(menuItem);
+        //if (positionItem.Equals("根节点"))
+        //{
+        //    menuItem = new MenuItem();
+        //    menuItem.Header = "根节点功能";
+        //    menuItem.Click += MenuItem_Click;
+        //    contextMenu.Items.Add(menuItem);
+        //}
+        //else if (positionItem.Equals("一级节点"))
+        //{
+        //    menuItem = new MenuItem();
+        //    menuItem.Header = "一级节点功能";
+        //    menuItem.Click += new RoutedEventHandler((sender, e) => { MessageBox.Show("一级节点功能"); });
+        //    contextMenu.Items.Add(menuItem);
+        //}
+        //else if (positionItem.Equals("二级节点"))
+        //{
+        //    menuItem = new MenuItem();
+        //    menuItem.Header = "二级节点功能";
+        //    menuItem.Click += delegate { MessageBox.Show("二级节点功能"); };
+        //    contextMenu.Items.Add(menuItem);
+        //}
+
+        //this.treeView.ContextMenu = contextMenu;
     }
 }
 

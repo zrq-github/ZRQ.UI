@@ -108,14 +108,15 @@
             Grid.Row="2"
             ItemsSource="{Binding TreeNodeSource}"
             SelectedItemChanged="treeView_SelectedItemChanged"
-            PreviewMouseDoubleClick="treeView_PreviewMouseDoubleClick">
+            PreviewMouseDoubleClick="treeView_PreviewMouseDoubleClick"
+            PreviewMouseRightButtonDown ="TreeView_OnPreviewMouseRightButtonDown">
 
-            <TreeView.ContextMenu>
+            <!--<TreeView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="排序"
                               Click="MenuItem_Click"></MenuItem>
                 </ContextMenu>
-            </TreeView.ContextMenu>
+            </TreeView.ContextMenu>-->
             
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate

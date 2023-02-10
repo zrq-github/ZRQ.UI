@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;Release_pdb</Configurations>
   </PropertyGroup>
 
   <Import Project="..\ZRQ.UI.Share\ZRQ.UI.Share.projitems" Label="Shared" />

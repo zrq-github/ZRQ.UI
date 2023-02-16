@@ -9,6 +9,10 @@
     <Configurations>Debug;Release;Release_pdb</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_pdb|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
   <Import Project="..\ZRQ.UI.Share\ZRQ.UI.Share.projitems" Label="Shared" />
 
   <ItemGroup>

@@ -10,7 +10,7 @@
         Height="400"
         Width="300">
     <Window.DataContext>
-        <local:TreeViewModel></local:TreeViewModel>
+        <local:TreeModel></local:TreeModel>
     </Window.DataContext>
     <!--<Window.Resources>
         <local:TreeNodeDataTemplateSelector x:Key="TreeNodeDataTemplateSelector">

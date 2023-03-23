@@ -9,7 +9,7 @@
     Title="GroupingSample"
     Width="220"
     Height="550"
-    d:DataContext="{d:DesignInstance local:DataGroupViewModel}">
+    d:DataContext="{d:DesignInstance local:DataGroupModel}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

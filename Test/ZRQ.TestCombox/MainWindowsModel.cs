@@ -3,7 +3,7 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.TestCombobox
 {
-    internal class MainWindowsModel : ViewModelBase
+    internal class MainWindowsModel : ModelBase
     {
         private IEnumerable? comboBoxItems;
 

@@ -10,7 +10,7 @@
         Height="280"
         Width="240">
     <Window.DataContext>
-        <local:ViewModel></local:ViewModel>
+        <local:Model></local:Model>
     </Window.DataContext>
     <Window.Resources>
         <ResourceDictionary>

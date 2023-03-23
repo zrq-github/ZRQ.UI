@@ -8,12 +8,12 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.TreeViewSort
 {
-    public class TreeViewModel : ViewModelBase
+    public class TreeModel : ModelBase
     {
         private string _searchText;
         private object selectedValue;
 
-        public TreeViewModel()
+        public TreeModel()
         {
 
         }

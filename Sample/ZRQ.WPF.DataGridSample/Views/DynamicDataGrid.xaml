@@ -12,7 +12,7 @@
     Height="450"
     Width="800">
     <Window.DataContext>
-        <viewModel:DynamicDataGridViewModel></viewModel:DynamicDataGridViewModel>
+        <viewModel:DynamicDataGridModel></viewModel:DynamicDataGridModel>
     </Window.DataContext>
     
     <Grid>

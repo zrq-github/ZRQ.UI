@@ -13,7 +13,7 @@ using ZRQ.WPF.DataGridSample.Views;
 
 namespace ZRQ.WPF.DataGridSample.ViewModels
 {
-    public class DynamicDataGridViewModel : ViewModelBase
+    public class DynamicDataGridModel : ModelBase
     {
         private ObservableCollection<DataGridColumn>? _dataGridColumns = new();
         private ObservableCollection<ObservableCollection<string>>? _dataGridItems = new();

@@ -18,7 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\ImgPathToBitConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIConverter\TabItemWidthConvt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIExtensions\EnumBindingSourceExtension.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UIModel\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UIModel\ModelBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\IconUtils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TextBoxHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UIUtils\TreeViewUtils.cs" />

@@ -12,7 +12,7 @@ namespace ZRQ.WPF.DataGridSample.GroupSample;
 /// <summary>
 /// 净高检测Model
 /// </summary>
-public class DataGroupModel : ViewModelBase
+public class DataGroupModel : ModelBase
 {
     private bool isIgnore;
 

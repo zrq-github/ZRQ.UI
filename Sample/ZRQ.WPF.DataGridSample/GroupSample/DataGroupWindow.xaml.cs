@@ -42,13 +42,13 @@ namespace ZRQ.WPF.DataGridSample.GroupSample
     public partial class DataGroupWindow : Window
     {
         CollectionView? myView = null;
-        DataGroupViewModel viewModel;
+        DataGroupViewModel model;
 
         public DataGroupWindow()
         {
             InitializeComponent();
-            viewModel = new DataGroupViewModel();
-            this.DataContext = viewModel;
+            model = new DataGroupViewModel();
+            this.DataContext = model;
         }
 
         private void AddGrouping(object sender, RoutedEventArgs e)

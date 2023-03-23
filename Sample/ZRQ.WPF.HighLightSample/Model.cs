@@ -8,13 +8,13 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.HighLightSample
 {
-    internal class ViewModel : ViewModelBase
+    internal class Model : ModelBase
     {
         private string _name;
         private string _searchText;
         private TreeModels treeModels;
 
-        public ViewModel()
+        public Model()
         {
             this._searchText = String.Empty;
             this._name = string.Empty;

@@ -7,7 +7,7 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.TreeViewSort
 {
-    public class TreeNode : ViewModelBase,IEqualityComparer<TreeNode>
+    public class TreeNode : ModelBase,IEqualityComparer<TreeNode>
     {
         private ObservableCollection<TreeNode> childrens = new();
         private bool _isExpanded = true;

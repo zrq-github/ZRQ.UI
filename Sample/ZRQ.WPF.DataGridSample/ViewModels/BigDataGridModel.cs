@@ -6,7 +6,7 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.DataGridSample.ViewModels
 {
-    internal class BigDataGridModel : ViewModelBase
+    internal class BigDataGridModel : ModelBase
     {
         private ActionCommand? createData;
         public ICommand CreateData => createData ??= new ActionCommand(PerformCreateData);

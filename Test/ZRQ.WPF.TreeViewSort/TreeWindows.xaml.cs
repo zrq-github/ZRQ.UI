@@ -9,20 +9,20 @@ namespace ZRQ.WPF.TreeViewSort;
 /// </summary>
 public partial class TreeWindows : Window
 {
-    private TreeViewModel _treeViewModel;
+    private TreeModel treeModel;
 
     public TreeWindows()
     {
         InitializeComponent();
 
-        _treeViewModel = (TreeViewModel)this.DataContext;
+        treeModel = (TreeModel)this.DataContext;
     }
 
     private void btn_Sort(object sender, RoutedEventArgs e)
     {
         //this.treeView.Items.IsLiveSorting = true;
         //this.treeView.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription(nameof(TreeNode.ID), System.ComponentModel.ListSortDirection.Descending));
-        _treeViewModel.Sort();
+        treeModel.Sort();
     }
 
     private void btn_Init(object sender, RoutedEventArgs e)
@@ -31,8 +31,8 @@ public partial class TreeWindows : Window
         TreeNode node1 = new() { ID = "1", ParentID = "0" };
         TreeNode node2 = new() { ID = "2", ParentID = "0" };
 
-        _treeViewModel.TreeNodeSource.Add(node1);
-        _treeViewModel.TreeNodeSource.Add(node2);
+        treeModel.TreeNodeSource.Add(node1);
+        treeModel.TreeNodeSource.Add(node2);
 
         // 二层节点
         node1.Childrens.Add(new() { ID = "14", ParentID = "1" });

@@ -8,12 +8,12 @@ using ZRQ.UI.UIModel;
 
 namespace ZRQ.WPF.DataGridSample.GroupSample
 {
-    public class DataGroupViewModel : ViewModelBase
+    public class DataGroupModel : ModelBase
     {
         public ObservableCollection<DataGroupModel> DataGroupModels { get; set; } = new();
         public bool IsDataGridGroupShow { get; set; } = false;
 
-        public DataGroupViewModel()
+        public DataGroupModel()
         {
             InitDataGourpModels(this.DataGroupModels);
         }

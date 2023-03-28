@@ -28,7 +28,7 @@ namespace ZRQ.WPF.HighLightSample
             }
         }
 
-        public string Name { get => _name; set => SetValue(ref _name, value); }
+        public string Name { get => _name; set => SetProperty(ref _name, value); }
 
         public string SearchText
         {
